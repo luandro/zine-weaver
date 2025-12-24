@@ -228,10 +228,11 @@ export function ZineReader({ zine }: ZineReaderProps) {
               "flex items-center gap-2 px-4 py-2 rounded-sm transition-all duration-200",
               "border border-border",
               currentPageIndex === 0 
-                ? "opacity-30 cursor-not-allowed" 
+                ? "btn-disabled" 
                 : "hover:border-primary/50 hover:text-primary"
             )}
             aria-label="Previous page"
+            aria-disabled={currentPageIndex === 0}
           >
             <ChevronLeft size={16} />
             <span className="text-sm hidden sm:inline">{t(uiTranslations.previous)}</span>
@@ -263,10 +264,11 @@ export function ZineReader({ zine }: ZineReaderProps) {
               "flex items-center gap-2 px-4 py-2 rounded-sm transition-all duration-200",
               "border border-border",
               currentPageIndex === totalPages - 1 
-                ? "opacity-30 cursor-not-allowed" 
+                ? "btn-disabled" 
                 : "hover:border-primary/50 hover:text-primary"
             )}
             aria-label="Next page"
+            aria-disabled={currentPageIndex === totalPages - 1}
           >
             <span className="text-sm hidden sm:inline">{t(uiTranslations.next)}</span>
             <ChevronRight size={16} />

@@ -299,6 +299,11 @@
     z-index: 3;
   }
 
+  /* Button disabled state */
+  .btn-disabled {
+    @apply opacity-30 cursor-not-allowed !important;
+  }
+
   /* Symbol indicators */
   .symbol-human {
     @apply inline-flex items-center justify-center w-6 h-6 rounded-full border-2 border-human text-human text-xs;
