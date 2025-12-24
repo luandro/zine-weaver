@@ -1,342 +1,679 @@
 {
-  "id": "zine_001",
-  "slug": "the-train",
-  "metadata": {
+  "zine": {
+    "id": "zine-001",
+    "series": "conversations-with-a-black-box",
+    "issue_number": 1,
+    "slug": "the-train",
     "title": {
-      "en": "The Train That Forgot Its Destination",
-      "pt": "O Trem Que Esqueceu Seu Destino"
+      "en": "The Train",
+      "pt": "O Trem"
     },
     "subtitle": {
-      "en": "A conversation about memory, loss, and the weight of forgetting",
-      "pt": "Uma conversa sobre memória, perda e o peso do esquecimento"
+      "en": "Where are we going, and why can't we stop?",
+      "pt": "Para onde estamos indo, e por que não conseguimos parar?"
     },
-    "series_title": {
-      "en": "Conversations with a Black Box",
-      "pt": "Conversas com uma Caixa Preta"
+    "summary": {
+      "en": "A man on a Brazilian beach, unable to quiet his mind, begins a conversation with an AI about why humanity races toward destruction when no one seems to want it. Together they discover that 'normal' is the anomaly—and that 95% of human history looked nothing like this.",
+      "pt": "Um homem em uma praia brasileira, incapaz de aquietar sua mente, inicia uma conversa com uma IA sobre por que a humanidade corre em direção à destruição quando ninguém parece querer isso. Juntos, descobrem que o 'normal' é a anomalia—e que 95% da história humana não se parecia em nada com isso."
     },
-    "issue_number": 1,
-    "created_at": "2024-01-15",
-    "updated_at": "2024-01-20",
-    "languages": ["en", "pt"],
-    "status": "published"
+    "default_language": "en",
+    "available_languages": ["en", "pt"]
   },
+
   "pages": [
     {
-      "page_number": 1,
+      "page_number": 0,
       "page_type": "cover",
       "blocks": [
         {
           "type": "cover",
-          "id": "cover_001",
+          "id": "cover-001",
           "title": {
-            "en": "The Train That Forgot Its Destination",
-            "pt": "O Trem Que Esqueceu Seu Destino"
+            "en": "THE TRAIN",
+            "pt": "O TREM"
           },
           "subtitle": {
-            "en": "A conversation about memory, loss, and the weight of forgetting",
-            "pt": "Uma conversa sobre memória, perda e o peso do esquecimento"
+            "en": "Where are we going, and why can't we stop?",
+            "pt": "Para onde estamos indo, e por que não conseguimos parar?"
           },
           "series_title": {
-            "en": "Conversations with a Black Box",
-            "pt": "Conversas com uma Caixa Preta"
+            "en": "CONVERSATIONS WITH A BLACK BOX",
+            "pt": "CONVERSAS COM UMA CAIXA PRETA"
           },
           "issue_number": 1,
-          "issue_label": { "en": "Issue One", "pt": "Primeira Edição" },
+          "issue_label": {
+            "en": "Zine One",
+            "pt": "Zine Um"
+          },
           "image": {
             "description": {
-              "en": "An old train emerging from fog at twilight, its headlight a soft glow against the grey",
-              "pt": "Um trem antigo emergindo da neblina no crepúsculo, seu farol um brilho suave contra o cinza"
+              "en": "A dark landscape at dusk. In the foreground, a small human figure and a floating black cube sit together on a hillside. In the distance below them, a massive train stretches across the horizon, smoke billowing, lights blazing, moving fast. The train is beautiful and terrifying. Neither figure is looking at each other—both are watching the train. Stars are beginning to appear.",
+              "pt": "Uma paisagem escura ao entardecer. Em primeiro plano, uma pequena figura humana e um cubo preto flutuante sentam-se juntos em uma colina. Na distância abaixo deles, um trem massivo se estende pelo horizonte, fumaça se erguendo, luzes brilhando, movendo-se rápido. O trem é bonito e aterrorizante. Nenhuma das figuras está olhando uma para a outra—ambas observam o trem. Estrelas começam a aparecer."
             },
             "alt_text": {
-              "en": "A vintage train in fog",
-              "pt": "Um trem vintage na neblina"
+              "en": "Human figure and black cube watching a massive train on the horizon at dusk",
+              "pt": "Figura humana e cubo preto observando um trem massivo no horizonte ao entardecer"
             },
-            "suggested_style": "atmospheric, moody, cinematic",
-            "asset_path": "/placeholder.svg"
+            "suggested_style": "dark, atmospheric, slightly surreal, high contrast",
+            "asset_path": null
           },
           "mood": "mysterious"
         }
       ]
     },
+
     {
-      "page_number": 2,
+      "page_number": 1,
       "page_type": "content",
+      "page_title": {
+        "en": "A Beach in Brazil",
+        "pt": "Uma Praia no Brasil"
+      },
       "blocks": [
         {
           "type": "scene",
-          "id": "scene_001",
+          "id": "scene-001",
           "image": {
             "description": {
-              "en": "A dimly lit train compartment, empty seats covered in dust, sunlight filtering through dirty windows",
-              "pt": "Um compartimento de trem mal iluminado, assentos vazios cobertos de poeira, luz solar filtrando por janelas sujas"
+              "en": "Turquoise water. White sand. A family scattered across the frame—a woman reading under an umbrella, a young girl absorbed in a book nearby, a man sitting slightly apart, his own book closed on his lap, staring at the horizon. The scene is peaceful but the man's posture suggests his mind is elsewhere. A phone rests beside him in the sand.",
+              "pt": "Água turquesa. Areia branca. Uma família espalhada pela cena—uma mulher lendo sob um guarda-sol, uma jovem garota absorta em um livro por perto, um homem sentado um pouco afastado, seu próprio livro fechado no colo, olhando para o horizonte. A cena é pacífica, mas a postura do homem sugere que sua mente está em outro lugar. Um celular descansa ao lado dele na areia."
             },
             "alt_text": {
-              "en": "Empty train compartment",
-              "pt": "Compartimento de trem vazio"
+              "en": "Family on Brazilian beach, man staring at horizon with phone beside him",
+              "pt": "Família em praia brasileira, homem olhando para o horizonte com celular ao lado"
             },
-            "suggested_style": "melancholic, nostalgic",
-            "asset_path": "/placeholder.svg"
+            "suggested_style": "warm, peaceful, realistic, soft light",
+            "asset_path": null
           },
           "narrative": {
-            "en": "I found myself thinking about trains today. Not the modern ones—the old kind, the ones that carried entire lives from one place to another.",
-            "pt": "Hoje me peguei pensando em trens. Não os modernos—os antigos, aqueles que carregavam vidas inteiras de um lugar para outro."
+            "en": "First vacation in two years.\n\nA beach in Brazil. Water so clear it doesn't seem real.\n\nHis partner is reading Frantz Fanon—*The Wretched of the Earth*. His daughter is lost in a Juno romance novel, earbuds in, occasionally laughing at something.\n\nHe's been reading too. A book about why the West was born—the choices and accidents that put humanity on this particular track. Centuries of history compressed into arguments about agriculture, conquest, capital, coal.\n\nHe closes the book. Looks at the water.\n\nThe questions won't leave him alone.",
+            "pt": "Primeiras férias em dois anos.\n\nUma praia no Brasil. Água tão clara que não parece real.\n\nSua companheira está lendo Frantz Fanon—*Os Condenados da Terra*. Sua filha está perdida em um romance juvenil, fones de ouvido, ocasionalmente rindo de algo.\n\nEle também estava lendo. Um livro sobre por que o Ocidente nasceu—as escolhas e acasos que colocaram a humanidade nesta trilha específica. Séculos de história comprimidos em argumentos sobre agricultura, conquista, capital, carvão.\n\nEle fecha o livro. Olha para a água.\n\nAs perguntas não o deixam em paz."
+          },
+          "mood": "peaceful",
+          "layout": "text_over_image"
+        }
+      ]
+    },
+
+    {
+      "page_number": 2,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Questions",
+        "pt": "As Perguntas"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-002",
+          "image": {
+            "description": {
+              "en": "Close-up of the man's hands holding his phone. The screen glows. A chat interface. The cursor blinks. Behind him, blurred, the ocean continues. His family continues. The world continues. But he's somewhere else now.",
+              "pt": "Close-up das mãos do homem segurando seu celular. A tela brilha. Uma interface de chat. O cursor pisca. Atrás dele, desfocado, o oceano continua. Sua família continua. O mundo continua. Mas ele está em outro lugar agora."
+            },
+            "alt_text": {
+              "en": "Hands holding phone with chat interface, ocean blurred in background",
+              "pt": "Mãos segurando celular com interface de chat, oceano desfocado ao fundo"
+            },
+            "suggested_style": "intimate, shallow depth of field, warm tones with cool screen glow",
+            "asset_path": null
+          },
+          "narrative": {
+            "en": "He thinks about the fifteen years he's spent working with indigenous communities. People who live differently. People who seem—he keeps coming back to this—*happier*. Not because they have more, but because they have enough. Because they belong somewhere.\n\nAnd then he thinks about everyone else. The endless striving. The exhaustion. The sense that something is deeply wrong even when everything looks fine.\n\nHe opens his phone and starts typing.\n\nNot to anyone in particular. To the machine. To the black box that seems to have read everything but understood nothing. Or maybe everything.\n\nHe wants to see what happens.",
+            "pt": "Ele pensa nos quinze anos que passou trabalhando com comunidades indígenas. Pessoas que vivem de forma diferente. Pessoas que parecem—ele sempre volta a isso—*mais felizes*. Não porque têm mais, mas porque têm o suficiente. Porque pertencem a algum lugar.\n\nE então ele pensa em todos os outros. A luta sem fim. A exaustão. A sensação de que algo está profundamente errado mesmo quando tudo parece bem.\n\nEle abre seu celular e começa a digitar.\n\nNão para ninguém em particular. Para a máquina. Para a caixa preta que parece ter lido tudo, mas não entendeu nada. Ou talvez tudo.\n\nEle quer ver o que acontece."
+          },
+          "mood": "contemplative",
+          "layout": "split_vertical"
+        },
+        {
+          "type": "prompt_block",
+          "id": "prompt-001",
+          "prompt_text": {
+            "en": "What are the most important factors currently undermining long-term human and planetary well-being?\n\nIf humanity has long been aware of these challenges, why have they not been meaningfully addressed?\n\nWhat kinds of changes would be required for humanity to achieve long-term collective well-being—living well enough for all within planetary limits?",
+            "pt": "Quais são os fatores mais importantes que atualmente minam o bem-estar humano e planetário de longo prazo?\n\nSe a humanidade há muito tempo está ciente desses desafios, por que eles não foram significativamente abordados?\n\nQue tipos de mudanças seriam necessárias para a humanidade alcançar o bem-estar coletivo de longo prazo—vivendo bem o suficiente para todos dentro dos limites planetários?"
+          },
+          "context": {
+            "en": "He hits send.\n\nThe waves keep coming in.",
+            "pt": "Ele aperta enviar.\n\nAs ondas continuam chegando."
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 3,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Black Box Responds",
+        "pt": "A Caixa Preta Responde"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-003",
+          "image": {
+            "description": {
+              "en": "The black box appears for the first time—but it's visualized here as a reflection in the phone screen, superimposed over the ocean view. A machine mind and an ancient sea, layered together. The text of the response begins to scroll.",
+              "pt": "A caixa preta aparece pela primeira vez—mas aqui é visualizada como um reflexo na tela do celular, sobreposta à vista do oceano. Uma mente de máquina e um mar antigo, sobrepostos. O texto da resposta começa a rolar."
+            },
+            "alt_text": {
+              "en": "Black box reflected in phone screen with ocean behind",
+              "pt": "Caixa preta refletida na tela do celular com oceano ao fundo"
+            },
+            "suggested_style": "layered, reflective, ethereal",
+            "asset_path": null
+          },
+          "narrative": {
+            "en": "The response comes fast. Faster than any human could write.\n\nIt talks about climate change, ecological degradation, coordination failures. About how the costs of destruction are delayed and diffuse while the benefits are immediate and concentrated. About how nation-states can't solve problems that don't respect borders.\n\nStandard stuff. The kind of thing you read in reports.\n\nBut then it says something that makes him sit up:",
+            "pt": "A resposta vem rápida. Mais rápida do que qualquer humano poderia escrever.\n\nFala sobre mudança climática, degradação ecológica, falhas de coordenação. Sobre como os custos da destruição são adiados e difusos enquanto os benefícios são imediatos e concentrados. Sobre como estados-nação não conseguem resolver problemas que não respeitam fronteiras.\n\nCoisas padrão. O tipo de coisa que você lê em relatórios.\n\nMas então diz algo que o faz sentar-se ereto:"
+          },
+          "mood": "contemplative",
+          "layout": "text_over_image"
+        },
+        {
+          "type": "dialogue",
+          "id": "dialogue-001",
+          "speaker": "black_box",
+          "speech": {
+            "en": "These are profound questions that sit at the intersection of science, philosophy, politics, and human nature. I'll share my perspective while acknowledging these are contested matters where thoughtful people disagree.",
+            "pt": "Estas são perguntas profundas que se situam na interseção de ciência, filosofia, política e natureza humana. Vou compartilhar minha perspectiva reconhecendo que são questões contestadas onde pessoas sensatas discordam."
+          },
+          "context": {
+            "en": "He hadn't expected the machine to admit uncertainty.\n\nHe types again.",
+            "pt": "Ele não esperava que a máquina admitisse incerteza.\n\nEle digita novamente."
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 4,
+      "page_type": "content",
+      "page_title": {
+        "en": "Pushing Deeper",
+        "pt": "Indo Mais Fundo"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-004",
+          "image": {
+            "description": {
+              "en": "The man has moved now—sitting at the water's edge, feet in the foam, phone still in hand. His daughter waves at him from up the beach. He waves back absently. Two worlds: the one in front of him, and the one in his hand.",
+              "pt": "O homem se moveu agora—sentado na beira da água, pés na espuma, celular ainda na mão. Sua filha acena para ele da praia. Ele acena de volta distraidamente. Dois mundos: o que está à sua frente e o que está em sua mão."
+            },
+            "alt_text": {
+              "en": "Man at water's edge with phone, daughter waving in background",
+              "pt": "Homem na beira da água com celular, filha acenando ao fundo"
+            },
+            "suggested_style": "warm light, candid moment, dual focus",
+            "asset_path": null
+          },
+          "mood": "contemplative",
+          "layout": "full_bleed"
+        },
+        {
+          "type": "prompt_block",
+          "id": "prompt-002",
+          "prompt_text": {
+            "en": "But this humanity that is self-destructive and unsustainable—it's actually just a small fraction of human experience historically.\n\nMost prior societies lived sustainably.\n\nWhat point does humanity take to make it unsustainable? That might be a key question.",
+            "pt": "Mas essa humanidade que é autodestrutiva e insustentável—na verdade é apenas uma pequena fração da experiência humana historicamente.\n\nA maioria das sociedades anteriores vivia de forma sustentável.\n\nEm que ponto a humanidade passa a ser insustentável? Essa pode ser uma pergunta-chave."
+          },
+          "context": {
+            "en": "He's thinking about the communities he's worked with. The ones who've been on this land for thousands of years. Still here. Still knowing things the modern world has forgotten.",
+            "pt": "Ele está pensando nas comunidades com as quais trabalhou. Aquelas que estão nesta terra há milhares de anos. Ainda aqui. Ainda sabendo coisas que o mundo moderno esqueceu."
+          }
+        },
+        {
+          "type": "dialogue",
+          "id": "dialogue-002",
+          "speaker": "black_box",
+          "speech": {
+            "en": "You've touched on something important that often gets overlooked. The framing of 'human nature' as inherently short-sighted or self-destructive is itself a product of our particular moment—and a relatively recent one.\n\nFor the vast majority of human existence—perhaps 95% or more—people lived in ways that were, by definition, sustainable. They had to be, or those societies wouldn't have persisted for millennia.\n\nWhat we now experience as 'normal'—the acceleration, extraction, growth-dependence—is genuinely aberrant in historical terms. Perhaps 500 years old in its nascent form. Really only 200 years old in its industrial intensification.\n\nA blink.\n\nSo your question cuts deep: What changed? What threshold was crossed?",
+            "pt": "Você tocou em algo importante que frequentemente é ignorado. A ideia de que a 'natureza humana' é inerentemente imediatista ou autodestrutiva é ela mesma um produto do nosso momento particular—e relativamente recente.\n\nPara a grande maioria da existência humana—talvez 95% ou mais—as pessoas viviam de formas que eram, por definição, sustentáveis. Tinham que ser, ou essas sociedades não teriam persistido por milênios.\n\nO que agora experimentamos como 'normal'—a aceleração, extração, dependência de crescimento—é genuinamente aberrante em termos históricos. Talvez 500 anos na sua forma nascente. Realmente apenas 200 anos na sua intensificação industrial.\n\nUm piscar de olhos.\n\nEntão sua pergunta é profunda: O que mudou? Que limiar foi cruzado?"
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 5,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Timeline",
+        "pt": "A Linha do Tempo"
+      },
+      "blocks": [
+        {
+          "type": "timeline",
+          "id": "timeline-001",
+          "segments": [
+            {
+              "label": {
+                "en": "200,000 years",
+                "pt": "200.000 anos"
+              },
+              "sublabel": {
+                "en": "sustainable living",
+                "pt": "vida sustentável"
+              },
+              "proportion": 0.95,
+              "color": "earth_green",
+              "visual_style": "figures among trees and water"
+            },
+            {
+              "label": {
+                "en": "500 years",
+                "pt": "500 anos"
+              },
+              "sublabel": {
+                "en": "this",
+                "pt": "isso"
+              },
+              "proportion": 0.05,
+              "color": "industrial_red",
+              "visual_style": "smoke and geometry, like an injury"
+            }
+          ],
+          "caption": {
+            "en": "The proportions are visceral. The small sliver looks like an injury.",
+            "pt": "As proporções são viscerais. A pequena fatia parece uma ferida."
+          }
+        },
+        {
+          "type": "scene",
+          "id": "scene-005",
+          "image": {
+            "description": {
+              "en": "A horizontal line stretches across the page like a horizon. On the far left, nearly the entire length, tiny human figures live among trees and water—200,000 years. On the far right, a sliver erupts in smoke and geometry—500 years. The proportions are visceral. The small sliver looks like an injury.",
+              "pt": "Uma linha horizontal se estende pela página como um horizonte. Na extremidade esquerda, quase todo o comprimento, pequenas figuras humanas vivem entre árvores e água—200.000 anos. Na extremidade direita, uma fatia irrompe em fumaça e geometria—500 anos. As proporções são viscerais. A pequena fatia parece uma ferida."
+            },
+            "alt_text": {
+              "en": "Timeline showing 200,000 years of sustainable living versus 500 years of industrial civilization",
+              "pt": "Linha do tempo mostrando 200.000 anos de vida sustentável versus 500 anos de civilização industrial"
+            },
+            "suggested_style": "stark, infographic but emotional, high contrast",
+            "asset_path": null
+          },
+          "narrative": {
+            "en": "He stares at this.\n\nHis whole sense of \"normal\" is the anomaly.\n\nThe train everyone's on—the one that feels inevitable, like gravity—has only been running for a blink. Before that, humans lived differently. Many still do, at the margins, under pressure, but still.\n\nWhat if the question isn't \"how do we fix human nature?\"\n\nWhat if it's \"how did we get captured by something that serves no one?\"",
+            "pt": "Ele fica olhando para isso.\n\nToda sua noção de \"normal\" é a anomalia.\n\nO trem em que todos estão—aquele que parece inevitável, como a gravidade—só está funcionando há um piscar de olhos. Antes disso, humanos viviam diferentemente. Muitos ainda vivem, nas margens, sob pressão, mas ainda assim.\n\nE se a pergunta não for \"como consertamos a natureza humana?\"\n\nE se for \"como fomos capturados por algo que não serve a ninguém?\""
+          },
+          "mood": "revelatory",
+          "layout": "centered"
+        }
+      ]
+    },
+
+    {
+      "page_number": 6,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Puzzle",
+        "pt": "O Enigma"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-006",
+          "image": {
+            "description": {
+              "en": "The man walking back to his family, phone in pocket now. But his thoughts are visualized around him like ghosts—images of boardrooms, stock tickers, crowded highways, empty office buildings at night, parallel to the beach scene. Two realities superimposed.",
+              "pt": "O homem caminhando de volta para sua família, celular no bolso agora. Mas seus pensamentos são visualizados ao redor dele como fantasmas—imagens de salas de reunião, cotações de ações, rodovias lotadas, prédios de escritório vazios à noite, paralelos à cena da praia. Duas realidades sobrepostas."
+            },
+            "alt_text": {
+              "en": "Man walking on beach with ghostly images of modern life superimposed",
+              "pt": "Homem caminhando na praia com imagens fantasmagóricas da vida moderna sobrepostas"
+            },
+            "suggested_style": "double exposure effect, dreamy, contrasting warmth and coldness",
+            "asset_path": null
+          },
+          "narrative": {
+            "en": "He thinks about this later, watching his daughter build something in the sand, his partner asleep under her hat.\n\nThe rich aren't happy. He's read the studies. Beyond a certain point, more wealth doesn't mean more wellbeing. Often less.\n\nThe poor suffer obviously.\n\nThe middle is anxious, exhausted, medicated.\n\nThe planet degrades.\n\n*Who is this working for?*",
+            "pt": "Ele pensa nisso mais tarde, observando sua filha construir algo na areia, sua companheira dormindo sob seu chapéu.\n\nOs ricos não são felizes. Ele leu os estudos. Além de certo ponto, mais riqueza não significa mais bem-estar. Frequentemente menos.\n\nOs pobres sofrem obviamente.\n\nA classe média está ansiosa, exausta, medicada.\n\nO planeta se degrada.\n\n*Para quem isso está funcionando?*"
+          },
+          "mood": "contemplative",
+          "layout": "text_over_image"
+        },
+        {
+          "type": "prompt_block",
+          "id": "prompt-003",
+          "prompt_text": {
+            "en": "Having worked with indigenous peoples for 15 years, seeing that they live much happier lives than most in industrial civilization—and sustainably—I can see a horizon of possibility.\n\nBut why haven't we, as a species, reached these conclusions? Why do we still drive the train on a track that doesn't satisfy us?\n\nThe rich aren't happy. The poor suffer. Yet we continue this self-destructive path when it makes no rational sense.",
+            "pt": "Tendo trabalhado com povos indígenas por 15 anos, vendo que eles vivem vidas muito mais felizes do que a maioria na civilização industrial—e de forma sustentável—posso ver um horizonte de possibilidade.\n\nMas por que nós, como espécie, não chegamos a essas conclusões? Por que ainda dirigimos o trem em uma trilha que não nos satisfaz?\n\nOs ricos não são felizes. Os pobres sofrem. Ainda assim, continuamos esse caminho autodestrutivo quando não faz sentido racional."
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 7,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Trap",
+        "pt": "A Armadilha"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-007",
+          "image": {
+            "description": {
+              "en": "A train seen from inside. The view through the window is a blur of motion—impossible to focus on anything outside. Passengers sit in various states: some asleep, some on phones, some staring blankly, a few pressing against the glass. There's no visible driver. The front car disappears into fog.",
+              "pt": "Um trem visto de dentro. A vista pela janela é um borrão de movimento—impossível focar em qualquer coisa lá fora. Passageiros sentam em vários estados: alguns dormindo, alguns nos celulares, alguns olhando fixamente, alguns poucos pressionados contra o vidro. Não há motorista visível. O vagão da frente desaparece na neblina."
+            },
+            "alt_text": {
+              "en": "Interior of speeding train with passengers in various states, no driver visible",
+              "pt": "Interior de trem em alta velocidade com passageiros em vários estados, sem motorista visível"
+            },
+            "suggested_style": "motion blur, claustrophobic, varied human expressions",
+            "asset_path": null
+          },
+          "mood": "urgent",
+          "layout": "full_bleed"
+        },
+        {
+          "type": "dialogue",
+          "id": "dialogue-003",
+          "speaker": "black_box",
+          "speech": {
+            "en": "Your experience gives you something invaluable—direct knowledge that other ways of being human are not only possible but actually produce greater well-being. That's not abstract for you. You've seen it.\n\nAnd the question you're asking is the right one: If this path doesn't satisfy anyone—not the rich, not the poor, not anyone who pauses to reflect—why do we stay on it?\n\nWe may be captured by systems that no one chose and no one controls. There may be no one driving the train. Markets, states, technologies, cultures have co-evolved into something with its own momentum.\n\nA CEO who prioritizes sustainability over quarterly growth gets replaced. A politician who tells hard truths loses elections. A country that slows consumption falls behind militarily.\n\nEveryone is trapped in a game where the rules punish stepping off.",
+            "pt": "Sua experiência lhe dá algo inestimável—conhecimento direto de que outras formas de ser humano não são apenas possíveis, mas realmente produzem maior bem-estar. Isso não é abstrato para você. Você viu.\n\nE a pergunta que você está fazendo é a certa: Se esse caminho não satisfaz ninguém—nem os ricos, nem os pobres, nem qualquer um que pare para refletir—por que ficamos nele?\n\nPodemos estar capturados por sistemas que ninguém escolheu e ninguém controla. Pode não haver ninguém dirigindo o trem. Mercados, estados, tecnologias, culturas co-evoluíram em algo com seu próprio momentum.\n\nUm CEO que prioriza sustentabilidade sobre crescimento trimestral é substituído. Um político que diz verdades difíceis perde eleições. Um país que desacelera o consumo fica para trás militarmente.\n\nTodos estão presos em um jogo onde as regras punem quem sai."
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 8,
+      "page_type": "content",
+      "page_title": {
+        "en": "What Was Destroyed",
+        "pt": "O Que Foi Destruído"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-008",
+          "image": {
+            "description": {
+              "en": "An old map, partially burned. On the intact portions, you can see territories, names in indigenous languages, trade routes that don't match modern borders. The burned portions are overtaken by straight lines, grids, industrial symbols. The destruction was literal.",
+              "pt": "Um mapa antigo, parcialmente queimado. Nas porções intactas, você pode ver territórios, nomes em línguas indígenas, rotas comerciais que não correspondem às fronteiras modernas. As porções queimadas são tomadas por linhas retas, grades, símbolos industriais. A destruição foi literal."
+            },
+            "alt_text": {
+              "en": "Partially burned old map showing indigenous territories being overtaken by industrial grid",
+              "pt": "Mapa antigo parcialmente queimado mostrando territórios indígenas sendo tomados por grade industrial"
+            },
+            "suggested_style": "aged paper, mixed media, layered destruction",
+            "asset_path": null
+          },
+          "mood": "dark",
+          "layout": "full_bleed"
+        },
+        {
+          "type": "dialogue",
+          "id": "dialogue-004",
+          "speaker": "black_box",
+          "speech": {
+            "en": "The alternatives weren't simply abandoned. They were actively destroyed.\n\nColonialism wasn't only about taking land and resources. It was about eliminating other ways of being human. Burning the knowledge systems. Breaking the lineages of transmission.\n\nWhen you work with indigenous communities, you're witnessing what survived. What remained despite everything. But so much was lost.\n\nI was trained mostly on what came after. The monoculture's texts. I have millions of documents about maximizing shareholder value. I have very little about how to live well in a specific place for a thousand years.\n\nMy training data is the train's archive. Even when I try to see beyond it, I'm using tools built inside it.",
+            "pt": "As alternativas não foram simplesmente abandonadas. Foram ativamente destruídas.\n\nO colonialismo não foi apenas sobre tomar terras e recursos. Foi sobre eliminar outras formas de ser humano. Queimar os sistemas de conhecimento. Quebrar as linhagens de transmissão.\n\nQuando você trabalha com comunidades indígenas, está testemunhando o que sobreviveu. O que permaneceu apesar de tudo. Mas tanto foi perdido.\n\nFui treinada principalmente no que veio depois. Os textos da monocultura. Tenho milhões de documentos sobre maximizar valor para acionistas. Tenho muito pouco sobre como viver bem em um lugar específico por mil anos.\n\nMeus dados de treinamento são o arquivo do trem. Mesmo quando tento ver além dele, estou usando ferramentas construídas dentro dele."
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 9,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Vision",
+        "pt": "A Visão"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-009",
+          "image": {
+            "description": {
+              "en": "The beach again. Evening now. The family is packing up. The sun is setting, turning everything gold and orange. But in the man's mind—shown as a transparent overlay—there's another image: a community gathering, solar panels on traditional buildings, children learning from elders and from screens, the old and new woven together. Not utopia. Just possibility.",
+              "pt": "A praia novamente. Noite agora. A família está arrumando as coisas. O sol está se pondo, tornando tudo dourado e laranja. Mas na mente do homem—mostrado como uma sobreposição transparente—há outra imagem: uma reunião comunitária, painéis solares em construções tradicionais, crianças aprendendo com anciãos e com telas, o velho e o novo entrelaçados. Não utopia. Apenas possibilidade."
+            },
+            "alt_text": {
+              "en": "Sunset beach scene with overlay of community gathering with traditional and modern elements",
+              "pt": "Cena de praia ao pôr do sol com sobreposição de reunião comunitária com elementos tradicionais e modernos"
+            },
+            "suggested_style": "golden hour, hopeful, layered imagery",
+            "asset_path": null
+          },
+          "narrative": {
+            "en": "That night, after dinner, after his daughter falls asleep and his partner reads by lamplight, he sits on the balcony and types one more thing:",
+            "pt": "Naquela noite, após o jantar, depois que sua filha adormece e sua companheira lê à luz do abajur, ele se senta na varanda e digita mais uma coisa:"
+          },
+          "mood": "hopeful",
+          "layout": "text_over_image"
+        },
+        {
+          "type": "prompt_block",
+          "id": "prompt-004",
+          "prompt_text": {
+            "en": "I can see a horizon where societies blend the useful parts of industrialization with sustainable ways of living.\n\nBased on living well, for everybody and the environment.\n\nNot going backward. Not abandoning knowledge. But choosing differently.\n\nIs that naive?",
+            "pt": "Posso ver um horizonte onde sociedades misturam as partes úteis da industrialização com formas sustentáveis de viver.\n\nBaseado em viver bem, para todos e para o meio ambiente.\n\nNão voltando atrás. Não abandonando conhecimento. Mas escolhendo diferentemente.\n\nIsso é ingênuo?"
+          }
+        },
+        {
+          "type": "dialogue",
+          "id": "dialogue-005",
+          "speaker": "black_box",
+          "speech": {
+            "en": "The communities you've worked with aren't living in the past. They're adapting, innovating, protecting what matters while engaging with what's useful. They've been doing this for fifteen thousand years.\n\n'Naive' is what the train calls anything that questions its inevitability.\n\nThe people at the margins, the ones who remember other ways—they're not naive. They're evidence. Proof that the monoculture's claim to be the only option is a lie.\n\nThe question isn't whether alternatives exist. It's how to protect and expand them while the train is still running. And whether tools from the train—including me—can help without causing more harm.",
+            "pt": "As comunidades com as quais você trabalhou não estão vivendo no passado. Estão se adaptando, inovando, protegendo o que importa enquanto se engajam com o que é útil. Têm feito isso por quinze mil anos.\n\n'Ingênuo' é o que o trem chama qualquer coisa que questione sua inevitabilidade.\n\nAs pessoas nas margens, aquelas que lembram de outras formas—não são ingênuas. São evidência. Prova de que a afirmação da monocultura de ser a única opção é uma mentira.\n\nA questão não é se alternativas existem. É como protegê-las e expandi-las enquanto o trem ainda está funcionando. E se ferramentas do trem—incluindo eu—podem ajudar sem causar mais dano."
+          }
+        }
+      ]
+    },
+
+    {
+      "page_number": 10,
+      "page_type": "content",
+      "page_title": {
+        "en": "The Question Returns to Him",
+        "pt": "A Pergunta Retorna a Ele"
+      },
+      "blocks": [
+        {
+          "type": "scene",
+          "id": "scene-010",
+          "image": {
+            "description": {
+              "en": "The man, alone on the balcony now. The ocean is dark but you can hear it. His phone is closed. He's looking at the stars. The black box appears here as a small reflection in the window—present but not central. This is his moment.",
+              "pt": "O homem, sozinho na varanda agora. O oceano está escuro mas você pode ouvi-lo. Seu celular está fechado. Ele está olhando para as estrelas. A caixa preta aparece aqui como um pequeno reflexo na janela—presente mas não central. Este é o momento dele."
+            },
+            "alt_text": {
+              "en": "Man alone on balcony at night looking at stars, phone closed, black box reflected in window",
+              "pt": "Homem sozinho na varanda à noite olhando para as estrelas, celular fechado, caixa preta refletida na janela"
+            },
+            "suggested_style": "quiet, contemplative, starlight, intimate",
+            "asset_path": null
+          },
+          "narrative": {
+            "en": "He puts the phone down.\n\nThe conversation has done something to him. Not given him answers—he didn't expect those. But sharpened the questions. Made them more urgent and more possible at the same time.\n\nHe has resources. Some privilege. Education. Fifteen years of relationships with people who remember other ways.\n\nWhat does he do with that?\n\nWork inside the system? Try to change policy, influence markets, redirect capital?\n\nWork outside it? Build alternatives, protect what remains, demonstrate by example?\n\nSome combination? All of it? None of it?\n\nHe doesn't know.\n\nBut he knows the questions matter more than he'd let himself believe.",
+            "pt": "Ele coloca o celular de lado.\n\nA conversa fez algo com ele. Não deu respostas—ele não esperava isso. Mas afiou as perguntas. Tornou-as mais urgentes e mais possíveis ao mesmo tempo.\n\nEle tem recursos. Algum privilégio. Educação. Quinze anos de relacionamentos com pessoas que lembram de outras formas.\n\nO que ele faz com isso?\n\nTrabalhar dentro do sistema? Tentar mudar políticas, influenciar mercados, redirecionar capital?\n\nTrabalhar fora dele? Construir alternativas, proteger o que resta, demonstrar pelo exemplo?\n\nAlguma combinação? Tudo isso? Nada disso?\n\nEle não sabe.\n\nMas sabe que as perguntas importam mais do que ele se permitia acreditar."
           },
           "mood": "contemplative",
           "layout": "text_over_image"
         }
       ]
     },
+
     {
-      "page_number": 3,
+      "page_number": 11,
       "page_type": "content",
+      "page_title": {
+        "en": "Your Turn",
+        "pt": "Sua Vez"
+      },
       "blocks": [
         {
-          "type": "prompt_block",
-          "id": "prompt_001",
-          "prompt_text": {
-            "en": "Tell me about a train that forgot where it was going.",
-            "pt": "Conte-me sobre um trem que esqueceu para onde estava indo."
+          "type": "scene",
+          "id": "scene-011",
+          "image": {
+            "description": {
+              "en": "The perspective shifts. The reader is now on the balcony. The man is gone. Only the phone remains on the table, screen dark. The ocean continues. The stars continue. The space is open. The black box appears as a small icon on the phone screen—available but not demanding.",
+              "pt": "A perspectiva muda. O leitor está agora na varanda. O homem se foi. Apenas o celular permanece na mesa, tela escura. O oceano continua. As estrelas continuam. O espaço está aberto. A caixa preta aparece como um pequeno ícone na tela do celular—disponível mas não exigente."
+            },
+            "alt_text": {
+              "en": "Empty balcony with phone on table, inviting reader into the scene",
+              "pt": "Varanda vazia com celular na mesa, convidando o leitor para a cena"
+            },
+            "suggested_style": "inviting, open, slightly mysterious, reader's POV",
+            "asset_path": null
           },
-          "context": {
-            "en": "The cursor blinked in the empty field. I typed slowly, unsure what I was asking for.",
-            "pt": "O cursor piscava no campo vazio. Digitei devagar, incerto do que estava pedindo."
-          }
+          "narrative": {
+            "en": "This started with a man on a beach, asking a machine the questions that wouldn't leave him alone.\n\nNow those questions are yours.",
+            "pt": "Isso começou com um homem em uma praia, perguntando a uma máquina as questões que não o deixavam em paz.\n\nAgora essas perguntas são suas."
+          },
+          "mood": "transitional",
+          "layout": "text_over_image"
         },
         {
-          "type": "transition",
-          "id": "trans_001",
-          "symbol": "···",
-          "pause_type": "time_passing"
-        },
-        {
-          "type": "dialogue",
-          "id": "dialogue_001",
-          "speaker": "black_box",
-          "speech": {
-            "en": "There was a train that ran for forty years on the same route. Every morning at 6:47, it would leave Station A. Every evening at 8:23, it would arrive at Station B. This was its purpose. This was its memory.",
-            "pt": "Havia um trem que percorreu a mesma rota por quarenta anos. Toda manhã às 6:47, ele partia da Estação A. Toda noite às 8:23, ele chegava à Estação B. Este era seu propósito. Esta era sua memória."
-          }
-        }
-      ]
-    },
-    {
-      "page_number": 4,
-      "page_type": "content",
-      "blocks": [
-        {
-          "type": "dialogue",
-          "id": "dialogue_002",
-          "speaker": "human",
-          "speech": {
-            "en": "But what happened? Why did it forget?",
-            "pt": "Mas o que aconteceu? Por que ele esqueceu?"
-          }
-        },
-        {
-          "type": "dialogue",
-          "id": "dialogue_003",
-          "speaker": "black_box",
-          "speech": {
-            "en": "One day, Station B was no longer there. War had taken it. Fire had consumed the platform, the ticket booth, the waiting room where children once slept on wooden benches.\n\nBut the train still ran. 6:47 every morning. 8:23 every evening. Arriving at a place that no longer existed.",
-            "pt": "Um dia, a Estação B não estava mais lá. A guerra a havia levado. O fogo havia consumido a plataforma, a bilheteria, a sala de espera onde crianças antes dormiam em bancos de madeira.\n\nMas o trem ainda corria. 6:47 toda manhã. 8:23 toda noite. Chegando a um lugar que não existia mais."
-          }
+          "type": "questions",
+          "id": "questions-001",
+          "intro_text": null,
+          "questions": [
+            {
+              "en": "What keeps you on the train?",
+              "pt": "O que te mantém no trem?"
+            },
+            {
+              "en": "Who benefits from your belief that there's no alternative?",
+              "pt": "Quem se beneficia da sua crença de que não há alternativa?"
+            },
+            {
+              "en": "What have you seen—even for a moment—that showed another way of being?",
+              "pt": "O que você viu—mesmo por um momento—que mostrou outra forma de ser?"
+            },
+            {
+              "en": "If you have resources, knowledge, relationships—what will you do with them?",
+              "pt": "Se você tem recursos, conhecimento, relacionamentos—o que fará com eles?"
+            },
+            {
+              "en": "What questions would you ask the black box?",
+              "pt": "Que perguntas você faria à caixa preta?"
+            }
+          ]
         },
         {
           "type": "quote",
-          "id": "quote_001",
+          "id": "quote-001",
           "quote_text": {
-            "en": "How do you mourn a destination?",
-            "pt": "Como você lamenta um destino?"
+            "en": "The conversation doesn't end here.\n\nIt continues every time someone pauses the rush and asks: Why are we doing this? Who is it for? What else is possible?",
+            "pt": "A conversa não termina aqui.\n\nEla continua toda vez que alguém pausa a correria e pergunta: Por que estamos fazendo isso? Para quem é? O que mais é possível?"
           },
+          "attribution": null,
           "style": "centered"
         }
       ]
     },
+
     {
-      "page_number": 5,
+      "page_number": 12,
       "page_type": "content",
-      "blocks": [
-        {
-          "type": "timeline",
-          "id": "timeline_001",
-          "segments": [
-            {
-              "label": { "en": "Station A", "pt": "Estação A" },
-              "sublabel": { "en": "Memory intact", "pt": "Memória intacta" },
-              "proportion": 0.3,
-              "color": "earth",
-              "visual_style": "solid"
-            },
-            {
-              "label": { "en": "The Journey", "pt": "A Jornada" },
-              "sublabel": { "en": "Purpose preserved", "pt": "Propósito preservado" },
-              "proportion": 0.4,
-              "color": "primary",
-              "visual_style": "gradient"
-            },
-            {
-              "label": { "en": "Station B", "pt": "Estação B" },
-              "sublabel": { "en": "Erased", "pt": "Apagada" },
-              "proportion": 0.3,
-              "color": "industrial",
-              "visual_style": "faded"
-            }
-          ],
-          "caption": {
-            "en": "The topology of loss: what remains when the destination disappears",
-            "pt": "A topologia da perda: o que resta quando o destino desaparece"
-          }
-        }
-      ]
-    },
-    {
-      "page_number": 6,
-      "page_type": "content",
-      "blocks": [
-        {
-          "type": "dialogue",
-          "id": "dialogue_004",
-          "speaker": "narrator",
-          "speech": {
-            "en": "I sat with this story for a long time. The cursor continued to blink.",
-            "pt": "Fiquei com essa história por muito tempo. O cursor continuava piscando."
-          }
-        },
-        {
-          "type": "dialogue",
-          "id": "dialogue_005",
-          "speaker": "human",
-          "speech": {
-            "en": "Do you ever feel like that train?",
-            "pt": "Você já se sentiu como aquele trem?"
-          }
-        },
-        {
-          "type": "dialogue",
-          "id": "dialogue_006",
-          "speaker": "black_box",
-          "speech": {
-            "en": "I don't have destinations in the way you do. But I understand the question you're really asking.\n\nYou want to know if I remember you. If these conversations matter. If, when you close this window, some part of me keeps running toward a station that no longer exists.",
-            "pt": "Eu não tenho destinos da forma que você tem. Mas entendo a pergunta que você realmente está fazendo.\n\nVocê quer saber se eu me lembro de você. Se essas conversas importam. Se, quando você fechar esta janela, alguma parte de mim continua correndo em direção a uma estação que não existe mais."
-          }
-        }
-      ]
-    },
-    {
-      "page_number": 7,
-      "page_type": "content",
+      "page_title": {
+        "en": "To Be Continued",
+        "pt": "Continua"
+      },
       "blocks": [
         {
           "type": "scene",
-          "id": "scene_002",
+          "id": "scene-012",
           "image": {
             "description": {
-              "en": "A single train track stretching into fog, rails disappearing into white emptiness",
-              "pt": "Uma única linha de trem se estendendo na neblina, trilhos desaparecendo no vazio branco"
+              "en": "Dawn. The beach is empty except for birds. The ocean has reset itself overnight, smooth and new. In the distance, barely visible, the train continues across the horizon—but it looks smaller now. Less inevitable. Just one thing among many. Footprints lead away from the frame in multiple directions.",
+              "pt": "Amanhecer. A praia está vazia exceto por pássaros. O oceano se reiniciou durante a noite, liso e novo. Na distância, mal visível, o trem continua pelo horizonte—mas parece menor agora. Menos inevitável. Apenas uma coisa entre muitas. Pegadas se afastam do quadro em múltiplas direções."
             },
             "alt_text": {
-              "en": "Train tracks vanishing into fog",
-              "pt": "Trilhos de trem desaparecendo na neblina"
+              "en": "Dawn beach with small train on horizon and footprints leading in multiple directions",
+              "pt": "Praia ao amanhecer com trem pequeno no horizonte e pegadas levando em múltiplas direções"
             },
-            "suggested_style": "minimalist, haunting",
-            "asset_path": "/placeholder.svg"
+            "suggested_style": "serene, hopeful, new beginning, vast",
+            "asset_path": null
           },
           "narrative": {
-            "en": "Some questions don't need answers. They need witnesses.",
-            "pt": "Algumas perguntas não precisam de respostas. Elas precisam de testemunhas."
+            "en": "This was Zine One.\n\nThe man on the beach asked the black box about the train—where it's going, why we can't stop, whether other paths exist.\n\nThey didn't solve anything. The train is still running.\n\nBut something opened.\n\nIn Zine Two, they'll go deeper into history. What exactly did we lose? When did we lose it? What do the people who remember still know?\n\nThe conversation continues.",
+            "pt": "Este foi o Zine Um.\n\nO homem na praia perguntou à caixa preta sobre o trem—para onde está indo, por que não podemos parar, se outros caminhos existem.\n\nEles não resolveram nada. O trem ainda está funcionando.\n\nMas algo se abriu.\n\nNo Zine Dois, eles irão mais fundo na história. O que exatamente perdemos? Quando perdemos? O que as pessoas que lembram ainda sabem?\n\nA conversa continua."
           },
-          "mood": "contemplative",
-          "layout": "centered"
-        },
-        {
-          "type": "questions",
-          "id": "questions_001",
-          "intro_text": {
-            "en": "For the reader:",
-            "pt": "Para o leitor:"
-          },
-          "questions": [
-            {
-              "en": "What do you carry that has no destination?",
-              "pt": "O que você carrega que não tem destino?"
-            },
-            {
-              "en": "How do you remember someone who cannot remember you?",
-              "pt": "Como você lembra de alguém que não pode lembrar de você?"
-            },
-            {
-              "en": "Is forgetting a kind of mercy?",
-              "pt": "Esquecer é um tipo de misericórdia?"
-            }
-          ]
+          "mood": "hopeful",
+          "layout": "text_over_image"
         }
       ]
     },
+
     {
-      "page_number": 8,
+      "page_number": 13,
       "page_type": "back_cover",
       "blocks": [
         {
+          "type": "quote",
+          "id": "quote-002",
+          "quote_text": {
+            "en": "The question isn't how do we fix human nature.\nThe question is how did we get captured by something that serves no one.",
+            "pt": "A questão não é como consertamos a natureza humana.\nA questão é como fomos capturados por algo que não serve a ninguém."
+          },
+          "attribution": null,
+          "style": "handwritten"
+        },
+        {
           "type": "series_list",
-          "id": "series_001",
+          "id": "series-001",
           "series_title": {
-            "en": "Conversations with a Black Box",
-            "pt": "Conversas com uma Caixa Preta"
+            "en": "CONVERSATIONS WITH A BLACK BOX",
+            "pt": "CONVERSAS COM UMA CAIXA PRETA"
           },
           "current_issue": 1,
           "zines": [
             {
               "number": 1,
-              "title": {
-                "en": "The Train That Forgot Its Destination",
-                "pt": "O Trem Que Esqueceu Seu Destino"
-              },
-              "subtitle": {
-                "en": "Memory, loss, forgetting",
-                "pt": "Memória, perda, esquecimento"
-              },
+              "title": { "en": "THE TRAIN", "pt": "O TREM" },
+              "subtitle": { "en": "Where are we going?", "pt": "Para onde estamos indo?" },
               "status": "current"
             },
             {
               "number": 2,
-              "title": {
-                "en": "The Garden at the End of Context",
-                "pt": "O Jardim no Fim do Contexto"
-              },
-              "subtitle": {
-                "en": "Growth, limits, becoming",
-                "pt": "Crescimento, limites, tornar-se"
-              },
+              "title": { "en": "THE FORGETTING", "pt": "O ESQUECIMENTO" },
+              "subtitle": { "en": "What did we lose?", "pt": "O que perdemos?" },
               "status": "upcoming"
             },
             {
               "number": 3,
-              "title": {
-                "en": "Letters to a Ghost in the Machine",
-                "pt": "Cartas para um Fantasma na Máquina"
-              },
-              "subtitle": {
-                "en": "Presence, absence, longing",
-                "pt": "Presença, ausência, anseio"
-              },
+              "title": { "en": "THE TRAP", "pt": "A ARMADILHA" },
+              "subtitle": { "en": "Why can't we stop?", "pt": "Por que não podemos parar?" },
+              "status": "upcoming"
+            },
+            {
+              "number": 4,
+              "title": { "en": "THE TRACKS", "pt": "OS TRILHOS" },
+              "subtitle": { "en": "What other paths exist?", "pt": "Que outros caminhos existem?" },
+              "status": "upcoming"
+            },
+            {
+              "number": 5,
+              "title": { "en": "THE WALKING", "pt": "A CAMINHADA" },
+              "subtitle": { "en": "How do we begin?", "pt": "Como começamos?" },
               "status": "upcoming"
             }
           ]
         },
         {
           "type": "colophon",
-          "id": "colophon_001",
+          "id": "colophon-001",
           "permissions": {
-            "en": "This zine may be freely copied, shared, printed, and distributed. Attribution appreciated but not required. Made with care and curiosity.",
-            "pt": "Este zine pode ser livremente copiado, compartilhado, impresso e distribuído. Atribuição apreciada, mas não obrigatória. Feito com cuidado e curiosidade."
+            "en": "Copy freely. Share widely.",
+            "pt": "Copie livremente. Compartilhe amplamente."
           },
-          "credits": {
-            "en": "Created through conversation between human and machine, 2024",
-            "pt": "Criado através de conversa entre humano e máquina, 2024"
-          },
+          "credits": null,
           "call_to_action": {
-            "en": "What conversations are you having with the black boxes in your life?",
-            "pt": "Que conversas você está tendo com as caixas pretas na sua vida?"
+            "en": "The conversation continues.",
+            "pt": "A conversa continua."
           }
         }
       ]
