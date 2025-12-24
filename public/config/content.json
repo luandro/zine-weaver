@@ -41,6 +41,22 @@
       "en": "Language",
       "pt": "Idioma"
     },
+    "switchLanguage": {
+      "en": "Switch language",
+      "pt": "Mudar idioma"
+    },
+    "english": {
+      "en": "English",
+      "pt": "Inglês"
+    },
+    "portuguese": {
+      "en": "Portuguese",
+      "pt": "Português"
+    },
+    "currentLanguage": {
+      "en": "Current language: English",
+      "pt": "Idioma atual: Português"
+    },
     "backToHome": {
       "en": "Back to Home",
       "pt": "Voltar ao Início"
