@@ -1,48 +1,66 @@
 # Zine Weaver
 
-Zine Weaver is a Vite + React site for publishing a serialized zine collection ("Conversations with a Black Box"). It renders issue metadata and page blocks from structured TypeScript data and presents a reading view with language toggling and themed layout blocks.
+Zine Weaver is a specialized Vite + React platform for publishing and reading serialized digital zines. Its primary showcase is the collection **"Conversations with a Black Box"**, featuring visual stories that explore memory, consciousness, and the intersection of human and machine intelligence.
 
-## Tech Stack
-- Vite, React 18, TypeScript
-- React Router for routing
-- Tailwind CSS + shadcn/ui components
-- TanStack Query for data/client state
+## 🚀 Key Features
 
-## Quick Start
-```sh
-npm install
-npm run dev
-```
-Open the local URL printed by Vite (typically `http://localhost:5173`).
+- **Digital Zine Reader**: A responsive, immersive reading experience designed for visual storytelling.
+- **JSON-Driven Content**: Author zines using simple JSON files without touching source code.
+- **Multi-language Support**: Native support for English (EN) and Portuguese (PT) across all content.
+- **Automated Syncing**: A custom script automatically discovers, validates, and registers new zines.
+- **Offline Ready**: Automatic prefetching of zine assets for a resilient offline experience.
+- **Themed Layout Blocks**: Specialized rendering components for covers, scenes, dialogues, timelines, and more.
+- **Modern UI/UX**: Built with shadcn/ui, Tailwind CSS, and custom atmospheric styling (including curved floating scrollbars).
 
-## Scripts
-- `npm run dev`: start the dev server with HMR.
-- `npm run build`: production build to `dist/`.
-- `npm run build:dev`: development-mode build.
-- `npm run preview`: preview the production build locally.
-- `npm run lint`: run ESLint.
-- `npm run typecheck`: run TypeScript checks for app + node configs.
+## 🛠 Tech Stack
 
-## Project Structure
-- `src/pages`: route-level screens (`Index.tsx`, `ZineReadPage.tsx`).
-- `src/components`: shared UI, with shadcn primitives in `src/components/ui`.
-- `src/data/zines`: zine content data (currently `sample-zine.ts`).
-- `src/types`: domain types (see `src/types/zine.ts`).
-- `public/`: static assets; `dist/` is build output.
+- **Frontend**: React 18, Vite, TypeScript
+- **Routing**: React Router 6
+- **Styling**: Tailwind CSS, Lucide React (Icons)
+- **UI Components**: shadcn/ui (Radix UI)
+- **State Management**: TanStack Query
+- **Utilities**: ESLint, PostCSS, Husky (pre-commit hooks)
 
-## Adding or Editing Zines
-Detailed documentation on how to structure and add new zines can be found in [ZINES.md](./ZINES.md).
+## 📁 Project Structure
 
-- New zines should be added as separate files in `src/data/zines/`.
-- Register them in `src/data/zines/index.ts` (exporting them via `allZines`).
-- Each `Zine` includes metadata, languages, and a `pages` array with `blocks`.
-- Keep slugs unique, and ensure `page_number` is sequential for reader navigation.
+- `public/zines/`: Source JSON files for all zines.
+- `public/assets/zines/`: Image and media assets referenced by zines.
+- `scripts/`: Automation scripts (e.g., `sync-zines.mjs`).
+- `src/components/blocks/`: Individual layout block renderers (Cover, Scene, Dialogue, etc.).
+- `src/components/layout/`: Core UI components (Navigation, ZineReader, LanguageSwitcher).
+- `src/data/zines/`: The auto-generated registry of zines (generated from `public/zines`).
+- `src/pages/`: Route-level screens (Index, ZineReadPage).
+- `src/types/`: TypeScript definitions for the zine schema and application state.
 
-## Deployment (GitHub Pages)
-- Deploys on pushes to `main` via `.github/workflows/deploy.yml`.
-- The workflow sets `VITE_BASE_URL=/zine-weaver/` for the site base path.
-- If the repo name changes, update the base URL in the workflow.
+## 📖 Authoring Zines
 
-## Configuration Notes
-- Routing uses `import.meta.env.BASE_URL` in `src/App.tsx` for the basename.
-- Tailwind styles are defined in `src/index.css` and configured in `tailwind.config.ts`.
+Adding content to Zine Weaver is designed to be developer-friendly:
+
+1.  **Create Content**: Place a new `.json` file in `public/zines/`.
+2.  **Add Assets**: Put any images in `public/assets/zines/`.
+3.  **Sync**: Run `npm run dev` or `npm run sync-zines`.
+
+For a deep dive into the JSON schema and block types, see [ZINES.md](./ZINES.md).
+
+## ⚡ Scripts
+
+- `npm run dev`: Start the dev server (automatically runs `sync-zines`).
+- `npm run build`: Production build (automatically runs `sync-zines`).
+- `npm run sync-zines`: Manually regenerate the zine registry from JSON files.
+- `npm run typecheck`: Run TypeScript validation across the codebase.
+- `npm run lint`: Run ESLint checks.
+- `npm run preview`: Preview the production build locally.
+
+## 🌐 Deployment
+
+The project is configured for **GitHub Pages** deployment via GitHub Actions (`.github/workflows/deploy.yml`).
+
+- Pushing to the `main` branch triggers an automatic build and deploy.
+- The base URL is configured via `VITE_BASE_URL` in the workflow.
+
+## 🤝 Contributing
+
+When adding new features:
+1.  **UI/UX**: Mimic the existing "floating card" and atmospheric aesthetic.
+2.  **Typography**: Use the established `font-display` and `font-mono` classes.
+3.  **Code Quality**: Ensure `npm run typecheck` passes before committing.
