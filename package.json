@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "sync-zines": "node scripts/sync-zines.mjs",
+    "dev": "npm run sync-zines && vite",
+    "build": "npm run sync-zines && vite build",
+    "build:dev": "npm run sync-zines && vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit",

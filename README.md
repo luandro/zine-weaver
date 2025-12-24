@@ -31,14 +31,12 @@ Open the local URL printed by Vite (typically `http://localhost:5173`).
 - `public/`: static assets; `dist/` is build output.
 
 ## Adding or Editing Zines
-- Update `src/data/zines/sample-zine.ts` and append new entries to `allZines`.
+Detailed documentation on how to structure and add new zines can be found in [ZINES.md](./ZINES.md).
+
+- New zines should be added as separate files in `src/data/zines/`.
+- Register them in `src/data/zines/index.ts` (exporting them via `allZines`).
 - Each `Zine` includes metadata, languages, and a `pages` array with `blocks`.
 - Keep slugs unique, and ensure `page_number` is sequential for reader navigation.
-
-Example:
-```ts
-export const allZines: Zine[] = [sampleZine, myNewZine];
-```
 
 ## Deployment (GitHub Pages)
 - Deploys on pushes to `main` via `.github/workflows/deploy.yml`.
