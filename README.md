@@ -1,13 +1,13 @@
 # Zine Weaver
 
-Zine Weaver is a specialized Vite + React platform for publishing and reading serialized digital zines. Its primary showcase is the collection **"Conversations with a Black Box"**, featuring visual stories that explore memory, consciousness, and the intersection of human and machine intelligence.
+Zine Weaver is a specialized Vite + React platform for publishing and reading serialized digital zines. It provides an immersive, visual-first reading experience with built-in multi-language support and an automated content management workflow.
 
 ## 🚀 Key Features
 
-- **Digital Zine Reader**: A responsive, immersive reading experience designed for visual storytelling.
+- **Digital Zine Reader**: A responsive, immersive reading experience designed for high-impact visual storytelling.
 - **JSON-Driven Content**: Author zines using simple JSON files without touching source code.
-- **Multi-language Support**: Native support for English (EN) and Portuguese (PT) across all content.
-- **Automated Syncing**: A custom script automatically discovers, validates, and registers new zines.
+- **Multi-language Support**: Native support for multiple languages (defaulting to English and Portuguese) across all content.
+- **Automated Syncing**: A custom script automatically discovers, validates, and registers new zines added to the public directory.
 - **Offline Ready**: Automatic prefetching of zine assets for a resilient offline experience.
 - **Themed Layout Blocks**: Specialized rendering components for covers, scenes, dialogues, timelines, and more.
 - **Modern UI/UX**: Built with shadcn/ui, Tailwind CSS, and custom atmospheric styling (including curved floating scrollbars).
