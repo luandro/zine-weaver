@@ -1,6 +1,7 @@
 import { SceneBlock } from '@/types/zine';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import { getFallbackImageUrl } from '@/lib/assets';
 
 interface SceneProps {
   block: SceneBlock;
@@ -8,6 +9,8 @@ interface SceneProps {
 
 export function Scene({ block }: SceneProps) {
   const { t } = useLanguage();
+  const imageAlt = t(block.image.alt_text);
+  const imageSrc = block.image.asset_path ?? getFallbackImageUrl();
 
   const layoutClasses = {
     full_bleed: "min-h-[60vh] flex items-center justify-center text-center px-8",
@@ -31,15 +34,15 @@ export function Scene({ block }: SceneProps) {
         )}
       />
 
-      {/* Image placeholder - would render actual image in production */}
+      {/* Image */}
       {block.layout !== "centered" && (
         <div className="relative aspect-video md:aspect-[4/3] bg-secondary rounded overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-            <div className="text-center p-4">
-              <p className="text-xs uppercase tracking-wider mb-2">Image</p>
-              <p className="italic text-xs opacity-70">{t(block.image.description)}</p>
-            </div>
-          </div>
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
       )}
 

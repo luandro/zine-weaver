@@ -1,4 +1,5 @@
 import { Zine } from '@/types/zine';
+import trainPlaceholder from '@/assets/zines/train-placeholder.svg';
 
 export const sampleZine: Zine = {
   id: "zine_001",
@@ -53,7 +54,8 @@ export const sampleZine: Zine = {
               en: "A vintage train in fog",
               pt: "Um trem vintage na neblina"
             },
-            suggested_style: "atmospheric, moody, cinematic"
+            suggested_style: "atmospheric, moody, cinematic",
+            asset_path: trainPlaceholder
           },
           mood: "mysterious"
         }
@@ -75,7 +77,8 @@ export const sampleZine: Zine = {
               en: "Empty train compartment",
               pt: "Compartimento de trem vazio"
             },
-            suggested_style: "melancholic, nostalgic"
+            suggested_style: "melancholic, nostalgic",
+            asset_path: trainPlaceholder
           },
           narrative: {
             en: "I found myself thinking about trains today. Not the modern ones—the old kind, the ones that carried entire lives from one place to another.",
@@ -238,7 +241,8 @@ export const sampleZine: Zine = {
               en: "Train tracks vanishing into fog",
               pt: "Trilhos de trem desaparecendo na neblina"
             },
-            suggested_style: "minimalist, haunting"
+            suggested_style: "minimalist, haunting",
+            asset_path: trainPlaceholder
           },
           narrative: {
             en: "Some questions don't need answers. They need witnesses.",
@@ -342,5 +346,3 @@ export const sampleZine: Zine = {
     }
   ]
 };
-
-export const allZines: Zine[] = [sampleZine];

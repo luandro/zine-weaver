@@ -1,6 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { ZineReader } from '@/components/layout/ZineReader';
-import { allZines } from '@/data/zines/sample-zine';
+import { allZines } from '@/data/zines';
 
 export default function ZineReadPage() {
   const { slug } = useParams<{ slug: string }>();

@@ -1,7 +1,7 @@
 import { useLanguage, uiTranslations } from '@/contexts/LanguageContext';
 import { Navigation } from '@/components/layout/Navigation';
 import { ZineCard } from '@/components/ZineCard';
-import { allZines } from '@/data/zines/sample-zine';
+import { allZines } from '@/data/zines';
 import { Zine } from '@/types/zine';
 
 // Mock upcoming zines for display

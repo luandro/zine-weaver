@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1067" role="img" aria-labelledby="title desc">
+  <title id="title">Zine cover placeholder</title>
+  <desc id="desc">Abstract train silhouette emerging from fog with a centered square mark.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111411" />
+      <stop offset="100%" stop-color="#1f241f" />
+    </linearGradient>
+    <linearGradient id="fog" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4d2c9" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#d4d2c9" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#d4d2c9" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1067" fill="url(#sky)" />
+  <rect y="580" width="800" height="487" fill="#0f110f" />
+  <rect y="500" width="800" height="200" fill="url(#fog)" />
+  <g fill="#c9b68a" opacity="0.8">
+    <rect x="320" y="380" width="160" height="140" rx="12" />
+    <rect x="300" y="520" width="200" height="60" rx="16" />
+    <circle cx="350" cy="590" r="24" />
+    <circle cx="450" cy="590" r="24" />
+  </g>
+  <g fill="#ffffff" opacity="0.9">
+    <rect x="392" y="350" width="16" height="16" />
+  </g>
+  <g stroke="#b5a472" stroke-width="6" opacity="0.5">
+    <line x1="260" y1="740" x2="540" y2="740" />
+    <line x1="240" y1="780" x2="560" y2="780" />
+  </g>
+</svg>
