@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Zine, Page } from '@/types/zine';
 import { useLanguage, uiTranslations } from '@/contexts/LanguageContext';
@@ -15,9 +15,18 @@ export function ZineReader({ zine }: ZineReaderProps) {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const swipeStateRef = useRef({
+    pointerId: null as number | null,
+    startX: 0,
+    startY: 0,
+    isHorizontal: false,
+    isVertical: false,
+  });
 
   const totalPages = zine.pages.length;
   const currentPage = zine.pages[currentPageIndex];
+  const swipeMinDistance = 10;
+  const axisLockDistance = 10;
 
   const goToNextPage = useCallback(() => {
     if (currentPageIndex < totalPages - 1) {
@@ -63,6 +72,79 @@ export function ZineReader({ zine }: ZineReaderProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPageIndex]);
 
+  const resetSwipeState = useCallback(() => {
+    swipeStateRef.current = {
+      pointerId: null,
+      startX: 0,
+      startY: 0,
+      isHorizontal: false,
+      isVertical: false,
+    };
+  }, []);
+
+  const handlePointerDown = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    if (event.pointerType !== 'touch') {
+      return;
+    }
+
+    swipeStateRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      isHorizontal: false,
+      isVertical: false,
+    };
+  }, []);
+
+  const handlePointerMove = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    const swipeState = swipeStateRef.current;
+    if (swipeState.pointerId !== event.pointerId || swipeState.isHorizontal || swipeState.isVertical) {
+      return;
+    }
+
+    const deltaX = event.clientX - swipeState.startX;
+    const deltaY = event.clientY - swipeState.startY;
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
+
+    if (absX < axisLockDistance && absY < axisLockDistance) {
+      return;
+    }
+
+    if (absX > absY) {
+      swipeState.isHorizontal = true;
+    } else {
+      swipeState.isVertical = true;
+    }
+  }, [axisLockDistance]);
+
+  const handlePointerUp = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    const swipeState = swipeStateRef.current;
+    if (swipeState.pointerId !== event.pointerId) {
+      return;
+    }
+
+    const deltaX = event.clientX - swipeState.startX;
+
+    if (swipeState.isHorizontal && Math.abs(deltaX) >= swipeMinDistance) {
+      if (deltaX < 0) {
+        goToNextPage();
+      } else {
+        goToPrevPage();
+      }
+    }
+
+    resetSwipeState();
+  }, [goToNextPage, goToPrevPage, resetSwipeState, swipeMinDistance]);
+
+  const handlePointerCancel = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    if (swipeStateRef.current.pointerId !== event.pointerId) {
+      return;
+    }
+
+    resetSwipeState();
+  }, [resetSwipeState]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top bar */}
@@ -99,7 +181,14 @@ export function ZineReader({ zine }: ZineReaderProps) {
       </div>
 
       {/* Page content */}
-      <main className="pt-16 pb-24">
+      <main
+        className="pt-16 pb-24"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
+        style={{ touchAction: 'pan-y' }}
+      >
         <div 
           key={currentPageIndex}
           className="animate-fade-in"
