@@ -1,8 +1,10 @@
-import { useLanguage, uiTranslations } from '@/contexts/LanguageContext';
-import { Navigation } from '@/components/layout/Navigation';
-import { ZineCard } from '@/components/ZineCard';
-import { allZines } from '@/data/zines';
-import { Zine } from '@/types/zine';
+import { useRef } from "react";
+import { useLanguage, uiTranslations } from "@/contexts/LanguageContext";
+import { Navigation } from "@/components/layout/Navigation";
+import { HeroMorphCanvas } from "@/components/hero/HeroMorphCanvas";
+import { ZineCard } from "@/components/ZineCard";
+import { allZines } from "@/data/zines";
+import { Zine } from "@/types/zine";
 
 // Mock upcoming zines for display
 const upcomingZines: Partial<Zine>[] = [
@@ -60,22 +62,25 @@ const allDisplayZines = [...allZines, ...upcomingZines as Zine[]];
 
 export default function Index() {
   const { t } = useLanguage();
+  const cubeRef = useRef<HTMLSpanElement | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-24 gradient-hero">
+      <section id="hero-section" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-24 gradient-hero">
         {/* Background effects */}
         <div className="absolute inset-0 gradient-vignette pointer-events-none" />
         <div className="absolute inset-0 gradient-warm pointer-events-none" />
+        <div className="absolute inset-0 gradient-hero-animated pointer-events-none" />
+        <HeroMorphCanvas anchorRef={cubeRef} />
 
         {/* Hero content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
           {/* Symbol */}
           <div className="animate-fade-in">
-            <span className="inline-block text-5xl text-primary mb-8">■</span>
+            <span ref={cubeRef} className="inline-block text-5xl text-primary mb-8">■</span>
           </div>
 
           {/* Main title */}

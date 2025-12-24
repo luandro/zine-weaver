@@ -291,6 +291,18 @@
     background: var(--gradient-hero);
   }
 
+  .gradient-hero-animated {
+    background:
+      radial-gradient(140% 120% at 12% 18%, hsl(0 0% 0% / 0.85) 0%, transparent 62%),
+      radial-gradient(160% 130% at 88% 12%, hsl(0 0% 12% / 0.45) 0%, transparent 60%),
+      radial-gradient(170% 150% at 50% 88%, hsl(38 72% 50% / 0.18) 0%, transparent 66%);
+    background-size: 240% 240%;
+    animation: heroGlowShift 16s ease-in-out infinite alternate,
+      heroGlowPulse 7s ease-in-out infinite;
+    opacity: 0.95;
+    will-change: background-position, opacity;
+  }
+
   .gradient-fade {
     background: var(--gradient-fade);
   }
@@ -339,19 +351,86 @@
     animation: fadeIn 0.6s ease-out 0.3s forwards;
   }
 
+  .typewriter-text {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 0.2em;
+    clip-path: inset(0 0 0 0);
+  }
+
+  .typewriter-enter {
+    animation: typewriterReveal 1.8s steps(30, end) forwards;
+    will-change: clip-path;
+  }
+
+  .typewriter-exit {
+    animation: typewriterErase 1.4s steps(24, end) forwards;
+    will-change: clip-path;
+  }
+
+  .typewriter-hidden {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  .typewriter-text::after {
+    content: "";
+    position: absolute;
+    top: 0.1em;
+    bottom: 0.1em;
+    right: 0;
+    width: 1px;
+    background: currentColor;
+    animation: typewriterCaret 0.75s step-end infinite;
+    will-change: opacity;
+  }
+
+  .typewriter-hidden::after {
+    animation: none;
+    opacity: 0;
+  }
+
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
 
   @keyframes slideUp {
-    from { 
+    from {
       opacity: 0;
       transform: translateY(30px);
     }
-    to { 
+    to {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes typewriterReveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+
+  @keyframes typewriterErase {
+    from { clip-path: inset(0 0 0 0); }
+    to { clip-path: inset(0 100% 0 0); }
+  }
+
+  @keyframes typewriterCaret {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes heroGlowShift {
+    0% { background-position: 0% 0%, 100% 0%, 10% 90%; }
+    50% { background-position: 25% 20%, 70% 15%, 30% 70%; }
+    100% { background-position: 10% 35%, 55% 35%, 40% 60%; }
+  }
+
+  @keyframes heroGlowPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
   }
 }
