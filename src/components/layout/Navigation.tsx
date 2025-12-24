@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useConfig } from "@/contexts/ConfigContext";
 import { cn } from "@/lib/utils";
 
 interface NavigationProps {
@@ -10,12 +11,16 @@ interface NavigationProps {
 type TitleAnimationState = "hidden" | "typing" | "shown" | "erasing";
 
 export function Navigation({ showBackButton = false }: NavigationProps) {
+  const { site } = useConfig();
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [showScrollTitle, setShowScrollTitle] = useState(!isHome);
   const [titleState, setTitleState] = useState<TitleAnimationState>(
     isHome ? "hidden" : "shown"
   );
+
+  const symbol = site?.branding.symbol || "■";
+  const logoText = site?.branding.logoText || "Conversations with a Black Box";
 
   // Combined effect for scroll observation and title state management
   useEffect(() => {
@@ -68,7 +73,7 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
             isHome && "pointer-events-none"
           )}
         >
-          <span className="text-primary text-xl">■</span>
+          <span className="text-primary text-xl">{symbol}</span>
           <span
             onAnimationEnd={() => {
               setTitleState((prev) => {
@@ -85,7 +90,7 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
               titleState === "hidden" && "typewriter-hidden"
             )}
           >
-            Conversations with a Black Box
+            {logoText}
           </span>
         </Link>
 

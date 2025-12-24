@@ -1,0 +1,113 @@
+{
+  "$schema": "./theme.schema.json",
+  "colors": {
+    "dark": {
+      "background": "0 0% 4%",
+      "foreground": "45 20% 92%",
+      "card": "0 0% 7%",
+      "cardForeground": "45 20% 92%",
+      "popover": "0 0% 7%",
+      "popoverForeground": "45 20% 92%",
+      "primary": "38 72% 60%",
+      "primaryForeground": "0 0% 4%",
+      "secondary": "30 15% 15%",
+      "secondaryForeground": "45 20% 85%",
+      "muted": "0 0% 12%",
+      "mutedForeground": "0 0% 55%",
+      "accent": "190 45% 45%",
+      "accentForeground": "45 20% 95%",
+      "destructive": "0 62% 50%",
+      "destructiveForeground": "45 20% 95%",
+      "border": "0 0% 18%",
+      "input": "0 0% 18%",
+      "ring": "38 72% 60%",
+      "human": "35 55% 85%",
+      "humanGlow": "35 60% 70%",
+      "blackbox": "220 15% 20%",
+      "blackboxAccent": "220 20% 35%",
+      "narrator": "0 0% 70%",
+      "earthGreen": "120 25% 30%",
+      "industrialRed": "0 35% 40%",
+      "timelineBar": "0 0% 15%",
+      "moodPeaceful": "180 30% 40%",
+      "moodContemplative": "220 25% 45%",
+      "moodUrgent": "15 70% 50%",
+      "moodMysterious": "270 30% 35%",
+      "moodHopeful": "45 60% 55%",
+      "moodDark": "0 0% 8%",
+      "moodTransitional": "0 0% 25%",
+      "moodRevelatory": "50 80% 60%",
+      "sidebarBackground": "0 0% 6%",
+      "sidebarForeground": "45 20% 90%",
+      "sidebarPrimary": "38 72% 60%",
+      "sidebarPrimaryForeground": "0 0% 4%",
+      "sidebarAccent": "0 0% 12%",
+      "sidebarAccentForeground": "45 20% 90%",
+      "sidebarBorder": "0 0% 15%",
+      "sidebarRing": "38 72% 60%"
+    },
+    "light": {
+      "background": "45 20% 96%",
+      "foreground": "0 0% 8%",
+      "card": "0 0% 100%",
+      "cardForeground": "0 0% 8%",
+      "popover": "0 0% 100%",
+      "popoverForeground": "0 0% 8%",
+      "primary": "38 72% 45%",
+      "primaryForeground": "0 0% 100%",
+      "secondary": "35 20% 90%",
+      "secondaryForeground": "0 0% 15%",
+      "muted": "35 15% 92%",
+      "mutedForeground": "0 0% 40%",
+      "accent": "190 50% 40%",
+      "accentForeground": "0 0% 100%",
+      "border": "35 15% 85%",
+      "input": "35 15% 85%",
+      "ring": "38 72% 45%",
+      "human": "35 60% 25%",
+      "blackbox": "220 20% 90%",
+      "blackboxAccent": "220 15% 75%",
+      "narrator": "0 0% 35%"
+    }
+  },
+  "typography": {
+    "fontDisplay": "'Playfair Display', Georgia, serif",
+    "fontBody": "'Source Sans 3', -apple-system, sans-serif",
+    "fontMono": "'JetBrains Mono', 'Fira Code', monospace",
+    "googleFonts": [
+      "Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500",
+      "Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400",
+      "JetBrains+Mono:wght@300;400;500"
+    ]
+  },
+  "spacing": {
+    "pageMargin": "2rem",
+    "blockGap": "3rem",
+    "radius": "0.25rem"
+  },
+  "shadows": {
+    "glow": "0 0 40px hsl(38 72% 60% / 0.15)",
+    "card": "0 4px 24px hsl(0 0% 0% / 0.4)",
+    "elevated": "0 8px 48px hsl(0 0% 0% / 0.6)"
+  },
+  "gradients": {
+    "hero": "linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 4%) 100%)",
+    "fade": "linear-gradient(180deg, transparent 0%, hsl(0 0% 4%) 100%)",
+    "vignette": "radial-gradient(ellipse at center, transparent 0%, hsl(0 0% 4% / 0.8) 100%)",
+    "warm": "linear-gradient(135deg, hsl(38 72% 60% / 0.1) 0%, transparent 50%)",
+    "heroAnimated": {
+      "layers": [
+        "radial-gradient(170% 150% at 20% 25%, hsl(38 70% 45% / 0.15) 0%, transparent 58%)",
+        "radial-gradient(190% 170% at 80% 20%, hsl(270 40% 25% / 0.18) 0%, transparent 62%)",
+        "radial-gradient(160% 140% at 50% 85%, hsl(38 65% 40% / 0.12) 0%, transparent 60%)",
+        "radial-gradient(150% 130% at 35% 55%, hsl(270 35% 20% / 0.14) 0%, transparent 56%)",
+        "radial-gradient(180% 160% at 15% 15%, hsl(0 0% 2% / 0.6) 0%, transparent 65%)"
+      ],
+      "backgroundSize": "260% 260%",
+      "animation": {
+        "shift": "heroGlowShift 19s ease-in-out infinite alternate",
+        "pulse": "heroGlowPulse 8.5s ease-in-out infinite"
+      }
+    }
+  }
+}

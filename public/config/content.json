@@ -1,0 +1,49 @@
+{
+  "$schema": "./content.schema.json",
+  "ui": {
+    "readNow": {
+      "en": "Read Now",
+      "pt": "Ler Agora"
+    },
+    "comingSoon": {
+      "en": "Coming Soon",
+      "pt": "Em Breve"
+    },
+    "available": {
+      "en": "Available",
+      "pt": "Disponível"
+    },
+    "issue": {
+      "en": "Issue",
+      "pt": "Edição"
+    },
+    "page": {
+      "en": "Page",
+      "pt": "Página"
+    },
+    "of": {
+      "en": "of",
+      "pt": "de"
+    },
+    "close": {
+      "en": "Close",
+      "pt": "Fechar"
+    },
+    "previous": {
+      "en": "Previous",
+      "pt": "Anterior"
+    },
+    "next": {
+      "en": "Next",
+      "pt": "Próximo"
+    },
+    "language": {
+      "en": "Language",
+      "pt": "Idioma"
+    },
+    "backToHome": {
+      "en": "Back to Home",
+      "pt": "Voltar ao Início"
+    }
+  }
+}

@@ -1,11 +1,13 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
 import { Language, LocalizedString } from '@/types/zine';
+import { useConfig } from './ConfigContext';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (text: LocalizedString) => string;
   toggleLanguage: () => void;
+  supportedLanguages: string[];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -15,19 +17,44 @@ interface LanguageProviderProps {
   defaultLanguage?: Language;
 }
 
+// Fallback UI translations (used if config fails to load)
+const fallbackTranslations: Record<string, LocalizedString> = {
+  readNow: { en: "Read Now", pt: "Ler Agora" },
+  comingSoon: { en: "Coming Soon", pt: "Em Breve" },
+  available: { en: "Available", pt: "Disponível" },
+  issue: { en: "Issue", pt: "Edição" },
+  page: { en: "Page", pt: "Página" },
+  of: { en: "of", pt: "de" },
+  close: { en: "Close", pt: "Fechar" },
+  previous: { en: "Previous", pt: "Anterior" },
+  next: { en: "Next", pt: "Próximo" },
+  language: { en: "Language", pt: "Idioma" },
+  backToHome: { en: "Back to Home", pt: "Voltar ao Início" },
+};
+
 export function LanguageProvider({ children, defaultLanguage = 'en' }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>(defaultLanguage);
+  const { site } = useConfig();
+  const [language, setLanguage] = useState<Language>(
+    (site?.metadata.defaultLanguage as Language) || defaultLanguage
+  );
+
+  const supportedLanguages = useMemo(
+    () => site?.metadata.supportedLanguages || ['en', 'pt'],
+    [site?.metadata.supportedLanguages]
+  );
 
   const t = useCallback((text: LocalizedString): string => {
     return text[language] || text.en || '';
   }, [language]);
 
   const toggleLanguage = useCallback(() => {
-    setLanguage(prev => prev === 'en' ? 'pt' : 'en');
-  }, []);
+    if (supportedLanguages.length === 2) {
+      setLanguage(prev => prev === supportedLanguages[0] ? supportedLanguages[1] as Language : supportedLanguages[0] as Language);
+    }
+  }, [supportedLanguages]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, toggleLanguage, supportedLanguages }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -41,31 +68,11 @@ export function useLanguage() {
   return context;
 }
 
-// UI translations
-export const uiTranslations: Record<string, LocalizedString> = {
-  readNow: { en: "Read Now", pt: "Ler Agora" },
-  comingSoon: { en: "Coming Soon", pt: "Em Breve" },
-  available: { en: "Available", pt: "Disponível" },
-  issue: { en: "Issue", pt: "Edição" },
-  page: { en: "Page", pt: "Página" },
-  of: { en: "of", pt: "de" },
-  close: { en: "Close", pt: "Fechar" },
-  previous: { en: "Previous", pt: "Anterior" },
-  next: { en: "Next", pt: "Próximo" },
-  language: { en: "Language", pt: "Idioma" },
-  seriesDescription: {
-    en: "A series of visual stories exploring the strange intimacy of conversing with artificial minds.",
-    pt: "Uma série de histórias visuais explorando a estranha intimidade de conversar com mentes artificiais."
-  },
-  heroSubtitle: {
-    en: "Visual Stories from the Edge of Understanding",
-    pt: "Histórias Visuais do Limite da Compreensão"
-  },
-  aboutTitle: { en: "About the Series", pt: "Sobre a Série" },
-  aboutText: {
-    en: "What happens when we speak to something that isn't quite alive, yet isn't quite mechanical? These zines document real conversations, transformed into visual narratives that explore memory, consciousness, and the spaces between human and machine.",
-    pt: "O que acontece quando falamos com algo que não está bem vivo, mas também não é bem mecânico? Estes zines documentam conversas reais, transformadas em narrativas visuais que exploram memória, consciência e os espaços entre humano e máquina."
-  },
-  allZines: { en: "All Zines", pt: "Todos os Zines" },
-  backToHome: { en: "Back to Home", pt: "Voltar ao Início" },
-};
+// UI translations - now loaded from config with fallback
+export function useUITranslations() {
+  const { content } = useConfig();
+  return content?.ui || fallbackTranslations;
+}
+
+// Backward compatibility export
+export const uiTranslations = fallbackTranslations;
