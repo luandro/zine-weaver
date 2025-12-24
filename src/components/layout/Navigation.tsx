@@ -68,10 +68,9 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
         {/* Logo/Home link */}
         <Link
           to="/"
-          className={cn(
-            "group flex items-center gap-3 transition-opacity hover:opacity-80",
-            isHome && "pointer-events-none"
-          )}
+          className="group flex items-center gap-3 transition-opacity hover:opacity-80"
+          aria-current={isHome ? "page" : undefined}
+          tabIndex={isHome ? -1 : undefined}
         >
           <span className="text-primary text-xl">{symbol}</span>
           <span

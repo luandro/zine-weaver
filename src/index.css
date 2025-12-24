@@ -159,6 +159,25 @@
     background: hsl(var(--primary) / 0.3);
     color: hsl(var(--foreground));
   }
+
+  /* Keyboard focus styles for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Enhanced focus styles for buttons and links */
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    transition: outline-offset 0.2s ease;
+  }
+
+  /* Remove default browser outline since we're providing our own */
+  *:focus {
+    outline: none;
+  }
 }
 
 @layer components {
