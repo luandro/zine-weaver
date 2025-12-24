@@ -47,14 +47,16 @@ export function Scene({ block }: SceneProps) {
       )}
 
       {/* Narrative text */}
-      <div className={cn(
-        "relative z-10",
-        block.layout === "text_over_image" && "text-foreground bg-gradient-to-t from-background via-background/80 to-transparent p-8 -m-8 mt-0"
-      )}>
-        <p className="font-body text-lg md:text-xl leading-relaxed text-foreground/90">
-          {t(block.narrative)}
-        </p>
-      </div>
+      {block.narrative && (
+        <div className={cn(
+          "relative z-10",
+          block.layout === "text_over_image" && "text-foreground bg-gradient-to-t from-background via-background/80 to-transparent p-8 -m-8 mt-0"
+        )}>
+          <p className="font-body text-lg md:text-xl leading-relaxed text-foreground/90">
+            {t(block.narrative)}
+          </p>
+        </div>
+      )}
     </div>
   );
 }

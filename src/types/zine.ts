@@ -69,7 +69,7 @@ export interface SceneBlock {
   type: "scene";
   id: string;
   image: ImageSpec;
-  narrative: LocalizedString;
+  narrative?: LocalizedString;
   mood: Mood;
   layout: Layout;
 }
@@ -193,6 +193,7 @@ export interface Zine {
     updated_at: string;
     languages: string[];
     status: "draft" | "published";
+    summary?: LocalizedString;
   };
   pages: Page[];
 }

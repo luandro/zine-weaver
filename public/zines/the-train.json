@@ -1,9 +1,7 @@
 {
-  "zine": {
-    "id": "zine-001",
-    "series": "conversations-with-a-black-box",
-    "issue_number": 1,
-    "slug": "the-train",
+  "id": "zine-001",
+  "slug": "the-train",
+  "metadata": {
     "title": {
       "en": "The Train",
       "pt": "O Trem"
@@ -12,14 +10,23 @@
       "en": "Where are we going, and why can't we stop?",
       "pt": "Para onde estamos indo, e por que não conseguimos parar?"
     },
+    "series_title": {
+      "en": "CONVERSATIONS WITH A BLACK BOX",
+      "pt": "CONVERSAS COM UMA CAIXA PRETA"
+    },
+    "issue_number": 1,
+    "created_at": "2025-12-24T16:57:21.366Z",
+    "updated_at": "2025-12-24T16:57:21.367Z",
+    "languages": [
+      "en",
+      "pt"
+    ],
+    "status": "published",
     "summary": {
       "en": "A man on a Brazilian beach, unable to quiet his mind, begins a conversation with an AI about why humanity races toward destruction when no one seems to want it. Together they discover that 'normal' is the anomaly—and that 95% of human history looked nothing like this.",
       "pt": "Um homem em uma praia brasileira, incapaz de aquietar sua mente, inicia uma conversa com uma IA sobre por que a humanidade corre em direção à destruição quando ninguém parece querer isso. Juntos, descobrem que o 'normal' é a anomalia—e que 95% da história humana não se parecia em nada com isso."
-    },
-    "default_language": "en",
-    "available_languages": ["en", "pt"]
+    }
   },
-
   "pages": [
     {
       "page_number": 0,
@@ -61,7 +68,6 @@
         }
       ]
     },
-
     {
       "page_number": 1,
       "page_type": "content",
@@ -94,7 +100,6 @@
         }
       ]
     },
-
     {
       "page_number": 2,
       "page_type": "content",
@@ -139,7 +144,6 @@
         }
       ]
     },
-
     {
       "page_number": 3,
       "page_type": "content",
@@ -185,7 +189,6 @@
         }
       ]
     },
-
     {
       "page_number": 4,
       "page_type": "content",
@@ -235,7 +238,6 @@
         }
       ]
     },
-
     {
       "page_number": 5,
       "page_type": "content",
@@ -304,7 +306,6 @@
         }
       ]
     },
-
     {
       "page_number": 6,
       "page_type": "content",
@@ -345,7 +346,6 @@
         }
       ]
     },
-
     {
       "page_number": 7,
       "page_type": "content",
@@ -383,7 +383,6 @@
         }
       ]
     },
-
     {
       "page_number": 8,
       "page_type": "content",
@@ -421,7 +420,6 @@
         }
       ]
     },
-
     {
       "page_number": 9,
       "page_type": "content",
@@ -471,7 +469,6 @@
         }
       ]
     },
-
     {
       "page_number": 10,
       "page_type": "content",
@@ -504,7 +501,6 @@
         }
       ]
     },
-
     {
       "page_number": 11,
       "page_type": "content",
@@ -574,7 +570,6 @@
         }
       ]
     },
-
     {
       "page_number": 12,
       "page_type": "content",
@@ -607,7 +602,6 @@
         }
       ]
     },
-
     {
       "page_number": 13,
       "page_type": "back_cover",
@@ -633,32 +627,62 @@
           "zines": [
             {
               "number": 1,
-              "title": { "en": "THE TRAIN", "pt": "O TREM" },
-              "subtitle": { "en": "Where are we going?", "pt": "Para onde estamos indo?" },
+              "title": {
+                "en": "THE TRAIN",
+                "pt": "O TREM"
+              },
+              "subtitle": {
+                "en": "Where are we going?",
+                "pt": "Para onde estamos indo?"
+              },
               "status": "current"
             },
             {
               "number": 2,
-              "title": { "en": "THE FORGETTING", "pt": "O ESQUECIMENTO" },
-              "subtitle": { "en": "What did we lose?", "pt": "O que perdemos?" },
+              "title": {
+                "en": "THE FORGETTING",
+                "pt": "O ESQUECIMENTO"
+              },
+              "subtitle": {
+                "en": "What did we lose?",
+                "pt": "O que perdemos?"
+              },
               "status": "upcoming"
             },
             {
               "number": 3,
-              "title": { "en": "THE TRAP", "pt": "A ARMADILHA" },
-              "subtitle": { "en": "Why can't we stop?", "pt": "Por que não podemos parar?" },
+              "title": {
+                "en": "THE TRAP",
+                "pt": "A ARMADILHA"
+              },
+              "subtitle": {
+                "en": "Why can't we stop?",
+                "pt": "Por que não podemos parar?"
+              },
               "status": "upcoming"
             },
             {
               "number": 4,
-              "title": { "en": "THE TRACKS", "pt": "OS TRILHOS" },
-              "subtitle": { "en": "What other paths exist?", "pt": "Que outros caminhos existem?" },
+              "title": {
+                "en": "THE TRACKS",
+                "pt": "OS TRILHOS"
+              },
+              "subtitle": {
+                "en": "What other paths exist?",
+                "pt": "Que outros caminhos existem?"
+              },
               "status": "upcoming"
             },
             {
               "number": 5,
-              "title": { "en": "THE WALKING", "pt": "A CAMINHADA" },
-              "subtitle": { "en": "How do we begin?", "pt": "Como começamos?" },
+              "title": {
+                "en": "THE WALKING",
+                "pt": "A CAMINHADA"
+              },
+              "subtitle": {
+                "en": "How do we begin?",
+                "pt": "Como começamos?"
+              },
               "status": "upcoming"
             }
           ]
