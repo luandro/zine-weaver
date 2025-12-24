@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 import { useConfig } from "@/contexts/ConfigContext";
 import { cn } from "@/lib/utils";
 
@@ -95,6 +96,7 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
 
         {/* Right side controls */}
         <div className="flex items-center gap-4">
+          <ThemeSwitcher />
           <LanguageSwitcher variant="compact" />
         </div>
       </div>

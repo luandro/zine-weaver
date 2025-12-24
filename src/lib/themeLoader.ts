@@ -2,15 +2,10 @@ import type { ThemeConfig } from "@/types/config";
 
 /**
  * Apply theme configuration to CSS custom properties
+ * Note: Colors are now handled by createThemeStyles to support switching
  */
 export function applyThemeConfig(theme: ThemeConfig): void {
   const root = document.documentElement;
-
-  // Apply dark mode colors (default)
-  Object.entries(theme.colors.dark).forEach(([key, value]) => {
-    const cssVarName = `--${camelToKebab(key)}`;
-    root.style.setProperty(cssVarName, value);
-  });
 
   // Apply typography
   root.style.setProperty("--font-display", theme.typography.fontDisplay);
@@ -68,25 +63,43 @@ function loadGoogleFonts(fonts: string[]): void {
 }
 
 /**
- * Create a CSS style element for light mode overrides
+ * Create a CSS style element for all theme colors
  */
-export function createLightModeStyles(theme: ThemeConfig): void {
-  // Remove existing light mode styles if any
-  const existingStyle = document.querySelector('style[data-light-mode]');
+export function createThemeStyles(theme: ThemeConfig): void {
+  // Remove existing theme styles if any
+  const existingStyle = document.querySelector('style[data-theme-styles]');
   if (existingStyle) {
     existingStyle.remove();
   }
 
-  // Create CSS for light mode
-  const lightModeCSS = `.light {
+  let css = "";
+
+  // Default (Dark) Theme - applied to :root
+  css += `:root {
+${Object.entries(theme.colors.dark)
+  .map(([key, value]) => `  --${camelToKebab(key)}: ${value};`)
+  .join("\n")}
+}\n`;
+
+  // Light Mode
+  css += `.light {
 ${Object.entries(theme.colors.light)
   .map(([key, value]) => `  --${camelToKebab(key)}: ${value};`)
   .join("\n")}
+}\n`;
+
+  // High Contrast Mode
+  if (theme.colors.highContrast) {
+    css += `.high-contrast {
+${Object.entries(theme.colors.highContrast)
+  .map(([key, value]) => `  --${camelToKebab(key)}: ${value};`)
+  .join("\n")}
 }`;
+  }
 
   const style = document.createElement("style");
-  style.setAttribute("data-light-mode", "true");
-  style.textContent = lightModeCSS;
+  style.setAttribute("data-theme-styles", "true");
+  style.textContent = css;
   document.head.appendChild(style);
 }
 
@@ -95,5 +108,5 @@ ${Object.entries(theme.colors.light)
  */
 export function initializeTheme(theme: ThemeConfig): void {
   applyThemeConfig(theme);
-  createLightModeStyles(theme);
+  createThemeStyles(theme);
 }

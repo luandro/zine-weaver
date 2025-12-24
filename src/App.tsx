@@ -8,6 +8,7 @@ import { ConfigProvider } from "@/contexts/ConfigContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeInitializer } from "@/components/ThemeInitializer";
 import { prefetchZineAssets } from "@/lib/offline";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import Index from "./pages/Index";
 import ZineReadPage from "./pages/ZineReadPage";
 import NotFound from "./pages/NotFound";
@@ -28,23 +29,25 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ConfigProvider>
-        <ThemeInitializer />
-        <LanguageProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/read/:slug" element={<ZineReadPage />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
-        </LanguageProvider>
-      </ConfigProvider>
+      <ThemeProvider defaultTheme="dark" storageKey="zine-theme">
+        <ConfigProvider>
+          <ThemeInitializer />
+          <LanguageProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/read/:slug" element={<ZineReadPage />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </BrowserRouter>
+            </TooltipProvider>
+          </LanguageProvider>
+        </ConfigProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };

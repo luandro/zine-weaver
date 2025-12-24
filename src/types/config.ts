@@ -71,6 +71,30 @@ export interface LightThemeColors {
   narrator: string;
 }
 
+export interface HighContrastColors {
+  background: string;
+  foreground: string;
+  card: string;
+  cardForeground: string;
+  popover: string;
+  popoverForeground: string;
+  primary: string;
+  primaryForeground: string;
+  secondary: string;
+  secondaryForeground: string;
+  muted: string;
+  mutedForeground: string;
+  accent: string;
+  accentForeground: string;
+  border: string;
+  input: string;
+  ring: string;
+  human: string;
+  blackbox: string;
+  blackboxAccent: string;
+  narrator: string;
+}
+
 export interface Typography {
   fontDisplay: string;
   fontBody: string;
@@ -113,6 +137,7 @@ export interface ThemeConfig {
   colors: {
     dark: ThemeColors;
     light: LightThemeColors;
+    highContrast?: HighContrastColors;
   };
   typography: Typography;
   spacing: Spacing;
