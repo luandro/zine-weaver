@@ -1,5 +1,6 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage, useUITranslations } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -7,29 +8,30 @@ interface LanguageSwitcherProps {
 }
 
 export function LanguageSwitcher({ className, variant = 'default' }: LanguageSwitcherProps) {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, toggleLanguage } = useLanguage();
+  const t = useUITranslations();
 
   if (variant === 'compact') {
     return (
-      <button
-        onClick={() => setLanguage(language === 'en' ? 'pt' : 'en')}
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={toggleLanguage}
         className={cn(
-          "px-3 py-1.5 text-xs font-mono uppercase tracking-wider",
+          "px-3 h-9 text-xs font-mono uppercase tracking-wider",
           "border border-border rounded-sm min-w-[3rem]",
           "hover:border-primary/50 hover:text-primary transition-colors",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
           className
         )}
-        aria-label={language === 'en' ? 'Mudar para Português' : 'Switch to English'}
-        aria-pressed={false}
+        aria-label={t.switchLanguage[language]}
       >
         <span className="sr-only">
-          {language === 'en' ? 'Current language: English' : 'Idioma atual: Português'}
+          {t.currentLanguage[language]}
         </span>
         <span aria-hidden="true">
           {language === 'en' ? 'PT' : 'EN'}
         </span>
-      </button>
+      </Button>
     );
   }
 
@@ -37,36 +39,34 @@ export function LanguageSwitcher({ className, variant = 'default' }: LanguageSwi
     <div 
       className={cn("flex items-center gap-1 p-1 bg-secondary/50 rounded-sm", className)}
       role="group"
-      aria-label={language === 'en' ? 'Language Selection' : 'Seleção de Idioma'}
+      aria-label={t.language[language]}
     >
-      <button
+      <Button
+        variant={language === 'en' ? 'secondary' : 'ghost'}
+        size="sm"
         onClick={() => setLanguage('en')}
         className={cn(
-          "px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-all duration-200",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1",
-          language === 'en' 
-            ? "bg-primary text-primary-foreground" 
-            : "text-muted-foreground hover:text-foreground"
+          "px-3 h-8 text-xs font-mono uppercase tracking-wider rounded-sm transition-all duration-200",
+          language === 'en' ? "bg-background shadow-sm" : "text-muted-foreground hover:text-foreground"
         )}
-        aria-label="English"
+        aria-label={t.english[language]}
         aria-pressed={language === 'en'}
       >
-        English
-      </button>
-      <button
+        {t.english[language]}
+      </Button>
+      <Button
+        variant={language === 'pt' ? 'secondary' : 'ghost'}
+        size="sm"
         onClick={() => setLanguage('pt')}
         className={cn(
-          "px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-all duration-200",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1",
-          language === 'pt' 
-            ? "bg-primary text-primary-foreground" 
-            : "text-muted-foreground hover:text-foreground"
+          "px-3 h-8 text-xs font-mono uppercase tracking-wider rounded-sm transition-all duration-200",
+          language === 'pt' ? "bg-background shadow-sm" : "text-muted-foreground hover:text-foreground"
         )}
-        aria-label="Português"
+        aria-label={t.portuguese[language]}
         aria-pressed={language === 'pt'}
       >
-        Português
-      </button>
+        {t.portuguese[language]}
+      </Button>
     </div>
   );
 }

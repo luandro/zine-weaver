@@ -29,6 +29,10 @@ const fallbackTranslations: Record<string, LocalizedString> = {
   previous: { en: "Previous", pt: "Anterior" },
   next: { en: "Next", pt: "Próximo" },
   language: { en: "Language", pt: "Idioma" },
+  switchLanguage: { en: "Switch language", pt: "Mudar idioma" },
+  english: { en: "English", pt: "Inglês" },
+  portuguese: { en: "Portuguese", pt: "Português" },
+  currentLanguage: { en: "Current language: English", pt: "Idioma atual: Português" },
   backToHome: { en: "Back to Home", pt: "Voltar ao Início" },
 };
 
