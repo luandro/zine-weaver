@@ -44,6 +44,10 @@
     "backToHome": {
       "en": "Back to Home",
       "pt": "Voltar ao Início"
+    },
+    "comingSoonTooltip": {
+      "en": "This issue is forthcoming and will be available soon.",
+      "pt": "Esta edição está vindo e estará disponível em breve."
     }
   }
 }

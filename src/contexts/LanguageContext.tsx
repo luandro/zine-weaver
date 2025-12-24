@@ -21,6 +21,7 @@ interface LanguageProviderProps {
 const fallbackTranslations: Record<string, LocalizedString> = {
   readNow: { en: "Read Now", pt: "Ler Agora" },
   comingSoon: { en: "Coming Soon", pt: "Em Breve" },
+  comingSoonTooltip: { en: "This issue is forthcoming and will be available soon.", pt: "Esta edição está vindo e estará disponível em breve." },
   available: { en: "Available", pt: "Disponível" },
   issue: { en: "Issue", pt: "Edição" },
   page: { en: "Page", pt: "Página" },

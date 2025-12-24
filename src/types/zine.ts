@@ -192,7 +192,7 @@ export interface Zine {
     created_at: string;
     updated_at: string;
     languages: string[];
-    status: "draft" | "published";
+    status: "draft" | "published" | "comingSoon";
     summary?: LocalizedString;
   };
   pages: Page[];
