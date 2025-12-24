@@ -83,7 +83,7 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
               });
             }}
             className={cn(
-              "font-display text-sm tracking-wide text-foreground/80",
+              "font-display text-sm tracking-wide text-foreground/80 outline-none",
               "typewriter-text",
               titleState === "typing" && "typewriter-enter",
               titleState === "erasing" && "typewriter-exit",

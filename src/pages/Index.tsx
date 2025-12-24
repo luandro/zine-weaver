@@ -50,7 +50,7 @@ export default function Index() {
 
           {/* Main title */}
           <h1
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-medium text-foreground leading-[1.1] animate-slide-up"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-medium text-foreground leading-[1.1] animate-slide-up outline-none"
             style={{ animationDelay: '0.1s' }}
           >
             {t(heroTitle).split('\n').map((line, i) => (
@@ -95,7 +95,7 @@ export default function Index() {
       {/* About Section */}
       <section className="py-24 px-6 border-t border-border/50">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h2 className="font-display text-2xl md:text-3xl text-foreground">
+          <h2 className="font-display text-2xl md:text-3xl text-foreground outline-none">
             {t(aboutTitle)}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -107,7 +107,7 @@ export default function Index() {
       {/* Zines Grid */}
       <section className="py-24 px-6 bg-card/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-2xl text-center mb-16 text-muted-foreground">
+          <h2 className="font-display text-2xl text-center mb-16 text-muted-foreground outline-none">
             {t(allZinesTitle)}
           </h2>
 

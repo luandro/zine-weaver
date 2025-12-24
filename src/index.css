@@ -166,6 +166,11 @@
     outline-offset: 2px;
   }
 
+  /* Specific styles for elements that should never show focus outline */
+  .outline-none:focus-visible {
+    outline: none !important;
+  }
+
   /* Enhanced focus styles for buttons and links */
   button:focus-visible,
   a:focus-visible {
