@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# Zine Weaver
 
-## Project info
+Zine Weaver is a Vite + React site for publishing a serialized zine collection ("Conversations with a Black Box"). It renders issue metadata and page blocks from structured TypeScript data and presents a reading view with language toggling and themed layout blocks.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech Stack
+- Vite, React 18, TypeScript
+- React Router for routing
+- Tailwind CSS + shadcn/ui components
+- TanStack Query for data/client state
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+## Quick Start
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
+Open the local URL printed by Vite (typically `http://localhost:5173`).
 
-**Edit a file directly in GitHub**
+## Scripts
+- `npm run dev`: start the dev server with HMR.
+- `npm run build`: production build to `dist/`.
+- `npm run build:dev`: development-mode build.
+- `npm run preview`: preview the production build locally.
+- `npm run lint`: run ESLint.
+- `npm run typecheck`: run TypeScript checks for app + node configs.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
+- `src/pages`: route-level screens (`Index.tsx`, `ZineReadPage.tsx`).
+- `src/components`: shared UI, with shadcn primitives in `src/components/ui`.
+- `src/data/zines`: zine content data (currently `sample-zine.ts`).
+- `src/types`: domain types (see `src/types/zine.ts`).
+- `public/`: static assets; `dist/` is build output.
 
-**Use GitHub Codespaces**
+## Adding or Editing Zines
+- Update `src/data/zines/sample-zine.ts` and append new entries to `allZines`.
+- Each `Zine` includes metadata, languages, and a `pages` array with `blocks`.
+- Keep slugs unique, and ensure `page_number` is sequential for reader navigation.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Example:
+```ts
+export const allZines: Zine[] = [sampleZine, myNewZine];
+```
 
-## What technologies are used for this project?
+## Deployment (GitHub Pages)
+- Deploys on pushes to `main` via `.github/workflows/deploy.yml`.
+- The workflow sets `VITE_BASE_URL=/zine-weaver/` for the site base path.
+- If the repo name changes, update the base URL in the workflow.
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Configuration Notes
+- Routing uses `import.meta.env.BASE_URL` in `src/App.tsx` for the basename.
+- Tailwind styles are defined in `src/index.css` and configured in `tailwind.config.ts`.
