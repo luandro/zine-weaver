@@ -13,10 +13,10 @@ export function Scene({ block }: SceneProps) {
   const imageSrc = block.image.asset_path ?? getFallbackImageUrl();
 
   const layoutClasses = {
-    full_bleed: "min-h-[60vh] flex items-center justify-center text-center px-8",
+    full_bleed: "flex items-center justify-center text-center px-8",
     split_horizontal: "grid md:grid-cols-2 gap-8 items-center",
     split_vertical: "flex flex-col gap-8",
-    text_over_image: "relative min-h-[50vh] flex items-end p-8",
+    text_over_image: "relative flex items-end p-8",
     image_over_text: "flex flex-col gap-6",
     sidebar: "grid md:grid-cols-[1fr,2fr] gap-8",
     centered: "max-w-2xl mx-auto text-center px-8 py-12",
