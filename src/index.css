@@ -17,7 +17,7 @@
     --popover-foreground: 45 20% 92%;
 
     /* Primary - warm amber accent */
-    --primary: 38 72% 60%;
+    --primary: 38 72% 75%;
     --primary-foreground: 0 0% 4%;
 
     /* Secondary - muted warm */
@@ -25,7 +25,7 @@
     --secondary-foreground: 45 20% 85%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted-foreground: 0 0% 70%;
 
     /* Accent - teal for links/highlights */
     --accent: 190 45% 45%;
@@ -45,7 +45,7 @@
     --human-glow: 35 60% 70%;
     --blackbox: 220 15% 20%;
     --blackbox-accent: 220 20% 35%;
-    --narrator: 0 0% 70%;
+    --narrator: 0 0% 90%;
     
     /* Timeline colors */
     --earth-green: 120 25% 30%;
@@ -305,7 +305,7 @@
 
   /* Button disabled state */
   .btn-disabled {
-    @apply opacity-30 cursor-not-allowed !important;
+    @apply opacity-40 cursor-not-allowed !important;
   }
 
   /* Symbol indicators */

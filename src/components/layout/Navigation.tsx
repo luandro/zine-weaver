@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { useConfig } from "@/contexts/ConfigContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 
 interface NavigationProps {
@@ -13,6 +14,7 @@ type TitleAnimationState = "hidden" | "typing" | "shown" | "erasing";
 
 export function Navigation({ showBackButton = false }: NavigationProps) {
   const { site } = useConfig();
+  const { language } = useLanguage();
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [showScrollTitle, setShowScrollTitle] = useState(!isHome);
@@ -64,7 +66,14 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
   }, [isHome]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:px-8">
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      >
+        {isHome ? (language === 'en' ? 'Skip to zines' : 'Pular para zines') : (language === 'en' ? 'Skip to content' : 'Pular para o conteúdo')}
+      </a>
+      <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo/Home link */}
         <Link
@@ -101,5 +110,6 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
         </div>
       </div>
     </header>
+    </>
   );
 }

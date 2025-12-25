@@ -149,18 +149,18 @@ export function ZineReader({ zine }: ZineReaderProps) {
     <div className="min-h-screen bg-background">
       {/* Top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between" role="navigation" aria-label="Reader tools">
           {/* Close button */}
           <button
             onClick={handleClose}
-            className="p-2 -ml-2 text-muted-foreground hover:text-foreground transition-colors"
+            className="p-2 -ml-2 text-muted-foreground hover:text-foreground transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm"
             aria-label="Close reader"
           >
             <X size={20} />
           </button>
 
           {/* Page indicator */}
-          <div className="text-sm text-muted-foreground font-mono">
+          <div className="text-sm text-muted-foreground font-mono" role="status" aria-live="polite">
             <span>{t(uiTranslations.page)}</span>
             <span className="mx-2 text-foreground">{currentPageIndex + 1}</span>
             <span>{t(uiTranslations.of)}</span>
@@ -182,6 +182,7 @@ export function ZineReader({ zine }: ZineReaderProps) {
 
       {/* Page content */}
       <main
+        id="main-content"
         className="pt-16 pb-24"
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
@@ -219,16 +220,16 @@ export function ZineReader({ zine }: ZineReaderProps) {
 
       {/* Bottom navigation */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-t from-background via-background to-transparent pt-8 pb-4 px-4">
-        <div className="max-w-md mx-auto flex items-center justify-between">
+        <div className="max-w-md mx-auto flex items-center justify-between" role="navigation" aria-label="Page navigation">
           {/* Previous button */}
           <button
             onClick={goToPrevPage}
             disabled={currentPageIndex === 0}
             className={cn(
               "flex items-center gap-2 px-4 py-2 rounded-sm transition-all duration-200",
-              "border border-border",
+              "border border-border focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none",
               currentPageIndex === 0 
-                ? "btn-disabled" 
+                ? "opacity-40 grayscale cursor-not-allowed" 
                 : "hover:border-primary/50 hover:text-primary"
             )}
             aria-label="Previous page"
@@ -246,6 +247,7 @@ export function ZineReader({ zine }: ZineReaderProps) {
                 onClick={() => setCurrentPageIndex(i)}
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-200",
+                  "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none",
                   i === currentPageIndex 
                     ? "bg-primary scale-125" 
                     : "bg-muted hover:bg-muted-foreground/50"
@@ -262,9 +264,9 @@ export function ZineReader({ zine }: ZineReaderProps) {
             disabled={currentPageIndex === totalPages - 1}
             className={cn(
               "flex items-center gap-2 px-4 py-2 rounded-sm transition-all duration-200",
-              "border border-border",
+              "border border-border focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none",
               currentPageIndex === totalPages - 1 
-                ? "btn-disabled" 
+                ? "opacity-40 grayscale cursor-not-allowed" 
                 : "hover:border-primary/50 hover:text-primary"
             )}
             aria-label="Next page"

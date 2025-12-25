@@ -21,6 +21,7 @@ export function LanguageSwitcher({ className, variant = 'default' }: LanguageSwi
           "px-3 h-9 text-xs font-mono uppercase tracking-wider",
           "border border-border rounded-sm min-w-[3rem]",
           "hover:border-primary/50 hover:text-primary transition-colors",
+          "focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none",
           className
         )}
         aria-label={t.switchLanguage[language]}
@@ -47,6 +48,7 @@ export function LanguageSwitcher({ className, variant = 'default' }: LanguageSwi
         onClick={() => setLanguage('en')}
         className={cn(
           "px-3 h-8 text-xs font-mono uppercase tracking-wider rounded-sm transition-all duration-200",
+          "focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none",
           language === 'en' ? "bg-background shadow-sm" : "text-muted-foreground hover:text-foreground"
         )}
         aria-label={t.english[language]}
@@ -60,6 +62,7 @@ export function LanguageSwitcher({ className, variant = 'default' }: LanguageSwi
         onClick={() => setLanguage('pt')}
         className={cn(
           "px-3 h-8 text-xs font-mono uppercase tracking-wider rounded-sm transition-all duration-200",
+          "focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none",
           language === 'pt' ? "bg-background shadow-sm" : "text-muted-foreground hover:text-foreground"
         )}
         aria-label={t.portuguese[language]}

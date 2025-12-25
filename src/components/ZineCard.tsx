@@ -108,7 +108,7 @@ export function ZineCard({ zine, className }: ZineCardProps) {
   return (
     <Link 
       to={`/read/${zine.slug}`}
-      className="block"
+      className="block focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none rounded-sm transition-all"
     >
       {CardContent}
     </Link>
