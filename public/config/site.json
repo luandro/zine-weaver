@@ -51,8 +51,8 @@
   },
   "footer": {
     "copyright": {
-      "en": "Created through conversation between human and machine, 2024",
-      "pt": "Criado através de conversas entre humano e máquina, 2024"
+      "en": "Created through conversation between human and machine, {year}",
+      "pt": "Criado através de conversas entre humano e máquina, {year}"
     },
     "license": {
       "en": "These zines may be freely copied, shared, printed, and distributed. Attribution appreciated but not required.",

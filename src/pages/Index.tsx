@@ -26,7 +26,12 @@ export default function Index() {
   const aboutTitle = site?.about.title || { en: "About the Series", pt: "Sobre a Série" };
   const aboutText = site?.about.text || { en: "What happens when we speak to something that isn't quite alive, yet isn't quite mechanical? These zines document real conversations, transformed into visual narratives that explore memory, consciousness, and the spaces between human and machine.", pt: "O que acontece quando falamos com algo que não está bem vivo, mas também não é bem mecânico? Estes zines documentam conversas reais, transformadas em narrativas visuais que exploram memória, consciência e os espaços entre humano e máquina." };
   const allZinesTitle = site?.sections.allZinesTitle || { en: "All Zines", pt: "Todos os Zines" };
-  const copyright = site?.footer.copyright || { en: "Created through conversation between human and machine, 2024", pt: "Criado através de conversas entre humano e máquina, 2024" };
+  const currentYear = new Date().getFullYear();
+  const copyrightText = site?.footer.copyright || { en: "Created through conversation between human and machine, 2024", pt: "Criado através de conversas entre humano e máquina, 2024" };
+  const copyright = {
+    en: copyrightText.en.replace(/\{year\}|\d{4}/, currentYear.toString()),
+    pt: copyrightText.pt.replace(/\{year\}|\d{4}/, currentYear.toString())
+  };
   const license = site?.footer.license || { en: "These zines may be freely copied, shared, printed, and distributed. Attribution appreciated but not required.", pt: "Estes zines podem ser livremente copiados, compartilhados, impressos e distribuídos. Atribuição apreciada, mas não obrigatória." };
 
   return (
