@@ -17,35 +17,30 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
   const { language } = useLanguage();
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const [showScrollTitle, setShowScrollTitle] = useState(!isHome);
   const [titleState, setTitleState] = useState<TitleAnimationState>(
     isHome ? "hidden" : "shown"
   );
+  const effectiveTitleState = isHome ? titleState : "shown";
 
   const symbol = site?.branding.symbol || "■";
   const logoText = site?.branding.logoText || "Conversations with a Black Box";
 
   // Combined effect for scroll observation and title state management
   useEffect(() => {
-    // Non-home pages: always show title
+    // Non-home pages: no observer needed.
     if (!isHome) {
-      setShowScrollTitle(true);
-      setTitleState("shown");
       return;
     }
 
     // Home page: observe hero section for scroll-based visibility
     const hero = document.getElementById("hero-section");
     if (!hero) {
-      setShowScrollTitle(true);
-      setTitleState("shown");
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         const shouldShow = !entry.isIntersecting;
-        setShowScrollTitle(shouldShow);
 
         // Update animation state based on visibility
         setTitleState((prev) => {
@@ -94,9 +89,9 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
             className={cn(
               "font-display text-sm tracking-wide text-foreground/80 outline-none",
               "typewriter-text",
-              titleState === "typing" && "typewriter-enter",
-              titleState === "erasing" && "typewriter-exit",
-              titleState === "hidden" && "typewriter-hidden"
+              effectiveTitleState === "typing" && "typewriter-enter",
+              effectiveTitleState === "erasing" && "typewriter-exit",
+              effectiveTitleState === "hidden" && "typewriter-hidden"
             )}
           >
             {logoText}
