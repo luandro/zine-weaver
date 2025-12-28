@@ -157,7 +157,7 @@ export interface SiteMetadata {
 
 export interface Branding {
   symbol: string;
-  logoText: string;
+  logoText: LocalizedString;
   seriesLabel: LocalizedString;
 }
 

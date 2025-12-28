@@ -10,7 +10,10 @@
   },
   "branding": {
     "symbol": "■",
-    "logoText": "Conversations with a Black Box",
+    "logoText": {
+      "en": "Conversations with a Black Box",
+      "pt": "Conversas com uma Caixa Preta"
+    },
     "seriesLabel": {
       "en": "Zine Series",
       "pt": "Série de Zines"

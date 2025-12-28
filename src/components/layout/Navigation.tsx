@@ -14,7 +14,7 @@ type TitleAnimationState = "hidden" | "typing" | "shown" | "erasing";
 
 export function Navigation({ showBackButton = false }: NavigationProps) {
   const { site } = useConfig();
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [titleState, setTitleState] = useState<TitleAnimationState>(
@@ -23,7 +23,7 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
   const effectiveTitleState = isHome ? titleState : "shown";
 
   const symbol = site?.branding.symbol || "■";
-  const logoText = site?.branding.logoText || "Conversations with a Black Box";
+  const logoText = site?.branding.logoText || { en: "Conversations with a Black Box", pt: "Conversas com uma Caixa Preta" };
 
   // Combined effect for scroll observation and title state management
   useEffect(() => {
@@ -94,7 +94,7 @@ export function Navigation({ showBackButton = false }: NavigationProps) {
               effectiveTitleState === "hidden" && "typewriter-hidden"
             )}
           >
-            {logoText}
+            {t(logoText)}
           </span>
         </Link>
 
